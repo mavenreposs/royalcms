@@ -21,6 +21,8 @@
         <module>royalcms-component-upload</module>
         <module>royalcms-component-contracts</module>
         <module>royalcms-component-model</module>
+        <module>royalcms-component-config</module>
+        <module>royalcms-component-api</module>
     </modules>
 
     <properties>
