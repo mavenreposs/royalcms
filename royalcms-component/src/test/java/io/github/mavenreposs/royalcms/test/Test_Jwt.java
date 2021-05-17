@@ -1,4 +1,4 @@
-package io.github.mavenreposs.component.test;
+package io.github.mavenreposs.royalcms.test;
 
 import io.github.mavenreposs.royalcms.facades.RC_Jwt;
 import io.github.mavenreposs.royalcms.facades.RC_Log;
