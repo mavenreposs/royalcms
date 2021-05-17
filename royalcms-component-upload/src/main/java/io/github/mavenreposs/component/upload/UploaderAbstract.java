@@ -1,6 +1,6 @@
 package io.github.mavenreposs.component.upload;
 
-import io.github.mavenreposs.component.contracts.storage.Storage;
+import io.github.mavenreposs.royalcms.component.contracts.storage.Storage;
 import org.apache.commons.lang3.ArrayUtils;
 import org.springframework.web.multipart.MultipartFile;
 

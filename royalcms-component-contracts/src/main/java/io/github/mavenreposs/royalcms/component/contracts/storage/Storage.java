@@ -1,4 +1,4 @@
-package io.github.mavenreposs.component.contracts.storage;
+package io.github.mavenreposs.royalcms.component.contracts.storage;
 
 import java.io.File;
 import java.io.IOException;
