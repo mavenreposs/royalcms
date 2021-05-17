@@ -1,7 +1,7 @@
-package io.github.mavenreposs.component.upload;
+package io.github.mavenreposs.royalcms.component.upload;
 
-import io.github.mavenreposs.component.upload.utils.Md5CaculateUtil;
-import io.github.mavenreposs.component.upload.utils.Sha1CaculateUtil;
+import io.github.mavenreposs.royalcms.component.upload.utils.Md5CaculateUtil;
+import io.github.mavenreposs.royalcms.component.upload.utils.Sha1CaculateUtil;
 import org.springframework.web.multipart.MultipartFile;
 
 import java.io.IOException;

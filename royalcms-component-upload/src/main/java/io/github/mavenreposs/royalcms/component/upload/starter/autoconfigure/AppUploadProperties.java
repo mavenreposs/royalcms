@@ -1,4 +1,4 @@
-package io.github.mavenreposs.component.upload.starter.autoconfigure;
+package io.github.mavenreposs.royalcms.component.upload.starter.autoconfigure;
 
 import org.springframework.boot.context.properties.ConfigurationProperties;
 

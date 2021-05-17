@@ -1,4 +1,4 @@
-package io.github.mavenreposs.component.upload.utils;
+package io.github.mavenreposs.royalcms.component.upload.utils;
 
 import org.apache.commons.codec.binary.Hex;
 import org.apache.commons.codec.digest.DigestUtils;

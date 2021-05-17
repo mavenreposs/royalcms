@@ -1,4 +1,4 @@
-package io.github.mavenreposs.component.upload;
+package io.github.mavenreposs.royalcms.component.upload;
 
 import io.github.mavenreposs.royalcms.component.contracts.storage.Storage;
 import org.apache.commons.lang3.ArrayUtils;
