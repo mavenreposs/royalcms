@@ -1,6 +1,6 @@
 package io.github.mavenreposs.component.upload;
 
-import io.github.mavenreposs.component.bean.SpringBeanFactory;
+import io.github.mavenreposs.royalcms.component.bean.SpringBeanFactory;
 import io.github.mavenreposs.component.upload.starter.autoconfigure.AppUploadProperties;
 import mavenreposs.php.functions.PHPFunctions;
 import org.apache.commons.lang3.ArrayUtils;

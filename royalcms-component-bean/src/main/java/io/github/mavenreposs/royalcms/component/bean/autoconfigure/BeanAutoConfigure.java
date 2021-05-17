@@ -1,4 +1,4 @@
-package io.github.mavenreposs.component.bean.autoconfigure;
+package io.github.mavenreposs.royalcms.component.bean.autoconfigure;
 
 import cn.dscmall.component.bean.SpringBeanFactory;
 import org.springframework.context.annotation.Configuration;

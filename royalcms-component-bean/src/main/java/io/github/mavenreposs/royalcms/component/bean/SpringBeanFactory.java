@@ -1,4 +1,4 @@
-package io.github.mavenreposs.component.bean;
+package io.github.mavenreposs.royalcms.component.bean;
 
 import org.springframework.beans.BeansException;
 import org.springframework.context.ApplicationContext;

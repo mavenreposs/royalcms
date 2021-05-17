@@ -1,5 +1,5 @@
 # Auto Configure
 org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
-io.github.mavenreposs.component.bean.autoconfigure.BeanAutoConfigure
+io.github.mavenreposs.royalcms.component.bean.autoconfigure.BeanAutoConfigure
 org.springframework.context.ApplicationContextAware=\
-io.github.mavenreposs.component.bean.SpringBeanFactory
+io.github.mavenreposs.royalcms.component.bean.SpringBeanFactory
