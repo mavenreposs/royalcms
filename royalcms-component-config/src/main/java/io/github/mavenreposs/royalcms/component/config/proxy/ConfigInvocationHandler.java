@@ -1,6 +1,6 @@
 package io.github.mavenreposs.royalcms.component.config.proxy;
 
-import cn.dscmall.component.bean.SpringBeanFactory;
+import io.github.mavenreposs.royalcms.component.bean.SpringBeanFactory;
 import io.github.mavenreposs.royalcms.component.config.contracts.ConfigItemRepositoryInterface;
 import io.github.mavenreposs.royalcms.component.config.manager.ItemManager;
 
