@@ -1,7 +1,7 @@
 package cn.royalcms.component.model.query;
 
 
-import cn.royalcms.component.facades.RC_Log;
+import cn.royalcms.component.facades.log.RC_Log;
 import cn.royalcms.component.model.query.expression.*;
 
 import javax.persistence.criteria.*;

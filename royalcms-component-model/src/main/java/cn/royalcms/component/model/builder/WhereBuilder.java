@@ -1,7 +1,7 @@
 package cn.royalcms.component.model.builder;
 
 import cn.royalcms.component.model.query.WhereClauseInterface;
-import org.jetbrains.annotations.NotNull;
+import com.sun.istack.NotNull;
 import org.springframework.data.jpa.domain.Specification;
 
 import javax.persistence.criteria.CriteriaBuilder;
@@ -29,11 +29,11 @@ public class WhereBuilder<T> {
     }
 
     public static <T> QueryPredicateBuilder<T> builder() {
-        return new QueryPredicateBuilder<T>(BooleanOperator.AND);
+        return new QueryPredicateBuilder<T>(Predicate.BooleanOperator.AND);
     }
 
     public static <T> QueryPredicateBuilder<T> builderOr() {
-        return new QueryPredicateBuilder<T>(BooleanOperator.OR);
+        return new QueryPredicateBuilder<T>(Predicate.BooleanOperator.OR);
     }
 
 }
