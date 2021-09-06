@@ -1,7 +1,7 @@
 package cn.royalcms.component.facades;
 
-import io.github.mavenreposs.royalcms.component.config.contracts.ConfigItemRepositoryInterface;
-import io.github.mavenreposs.royalcms.component.config.proxy.ConfigInvocationHandler;
+import cn.royalcms.component.config.contracts.ConfigItemRepositoryInterface;
+import cn.royalcms.component.config.proxy.ConfigInvocationHandler;
 
 import java.lang.reflect.Proxy;
 import java.util.ArrayList;

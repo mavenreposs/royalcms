@@ -3,7 +3,7 @@ package cn.royalcms.component.datetime;
 /**
  * DateTimeUnits
  * <p>
- * Define units used by {@link DateTimeUtils#getDateDiff(Date, Date, DateTimeUnits)}
+ * Define units used by {@link DateTimeUtils #getDateDiff(Date, Date, DateTimeUnits)}
  * and also {@link DateTimeUtils#formatDate(long, DateTimeUnits)}
  */
 public enum DateTimeUnits {

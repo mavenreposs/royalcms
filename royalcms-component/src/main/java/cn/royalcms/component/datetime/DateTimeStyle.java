@@ -3,8 +3,8 @@ package cn.royalcms.component.datetime;
 /**
  * DateTimeStyle
  * <p>
- * Defined style for parsing date into string used by {@link DateTimeUtils#formatWithStyle(Date, DateTimeStyle)}
- * and also {@link DateTimeUtils#getTimeAgo(Context, Date, DateTimeStyle)}
+ * Defined style for parsing date into string used by {@link DateTimeUtils #formatWithStyle(Date, DateTimeStyle)}
+ * and also {@link DateTimeUtils #getTimeAgo(Context, Date, DateTimeStyle)}
  */
 public enum DateTimeStyle {
     /**

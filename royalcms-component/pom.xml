@@ -79,6 +79,24 @@
             <groupId>io.github.mavenreposs</groupId>
             <artifactId>php-functions</artifactId>
         </dependency>
+        <dependency>
+            <groupId>io.github.mavenreposs</groupId>
+            <artifactId>royalcms-component-bean</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>io.github.mavenreposs</groupId>
+            <artifactId>royalcms-component-config</artifactId>
+            <version>1.0.0</version>
+            <scope>compile</scope>
+        </dependency>
+        <dependency>
+            <groupId>io.github.mavenreposs</groupId>
+            <artifactId>royalcms-component-contracts</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>io.github.mavenreposs</groupId>
+            <artifactId>royalcms-component-upload</artifactId>
+        </dependency>
 
     </dependencies>
 

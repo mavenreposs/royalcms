@@ -1,6 +1,7 @@
 package cn.royalcms.component.facades;
 
-import cn.dscmall.component.upload.*;
+
+import cn.royalcms.component.upload.*;
 
 public class RC_Upload {
 

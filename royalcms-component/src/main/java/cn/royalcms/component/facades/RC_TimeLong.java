@@ -1,7 +1,6 @@
 package cn.royalcms.component.facades;
 
-
-import mavenreposs.php.functions.strtotime.StrToTime;
+import io.github.mavenreposs.php.functions.strtotime.StrToTime;
 
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;

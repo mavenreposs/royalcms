@@ -1,6 +1,7 @@
 package cn.royalcms.component.facades;
 
-import cn.dscmall.component.bean.SpringBeanFactory;
+
+import cn.royalcms.component.bean.SpringBeanFactory;
 
 public class RC_Bean {
 
