@@ -6,7 +6,7 @@ import org.xnap.commons.i18n.I18n;
 import java.text.MessageFormat;
 import java.util.Locale;
 
-public class fRC_Gettext {
+public class RC_Gettext {
 
     private I18n i18n;
 
