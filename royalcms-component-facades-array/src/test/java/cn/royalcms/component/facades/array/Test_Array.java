@@ -1,12 +1,11 @@
 package cn.royalcms.component.facades.array;
 
-import cn.royalcms.component.facades.RC_Array;
-import cn.royalcms.component.facades.RC_Log;
+import cn.royalcms.component.facades.log.RC_Log;
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
 import java.util.Arrays;
 
-import static org.junit.jupiter.api.Assertions.assertArrayEquals;
 
 public class Test_Array {
 

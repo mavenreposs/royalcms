@@ -1,5 +1,6 @@
 package cn.royalcms.component.facades.array;
 
+
 import org.apache.commons.lang3.ArrayUtils;
 
 public class RC_Array {
