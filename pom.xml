@@ -17,6 +17,7 @@
     <packaging>pom</packaging>
 
     <modules>
+        <module>royalcms-component</module>
         <module>royalcms-component-bean</module>
         <module>royalcms-component-upload</module>
         <module>royalcms-component-contracts</module>
