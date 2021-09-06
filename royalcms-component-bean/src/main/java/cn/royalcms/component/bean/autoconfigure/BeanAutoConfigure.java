@@ -1,6 +1,6 @@
 package cn.royalcms.component.bean.autoconfigure;
 
-import cn.dscmall.component.bean.SpringBeanFactory;
+import cn.royalcms.component.bean.SpringBeanFactory;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Import;
 
