@@ -1,4 +1,4 @@
-package cn.royalcms.component.facades;
+package cn.royalcms.component.facades.storage;
 
 import cn.royalcms.component.bean.SpringBeanFactory;
 import cn.royalcms.component.contracts.storage.Cloud;
