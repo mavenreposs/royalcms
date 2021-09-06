@@ -1,4 +1,4 @@
-package io.github.mavenreposs.royalcms.component.contracts.storage;
+package cn.royalcms.component.contracts.storage;
 
 public interface Cloud extends Storage {
 
