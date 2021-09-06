@@ -1,6 +1,5 @@
 package cn.royalcms.component.facades.log;
 
-import cn.royalcms.component.facades.RC_Log;
 import org.junit.jupiter.api.Test;
 
 public class Test_Log {
