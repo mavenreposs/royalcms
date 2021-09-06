@@ -1,6 +1,5 @@
 package cn.royalcms.component.facades.time;
 
-import cn.royalcms.component.facades.RC_Time;
 import org.junit.jupiter.api.Test;
 
 public class Test_Time {
