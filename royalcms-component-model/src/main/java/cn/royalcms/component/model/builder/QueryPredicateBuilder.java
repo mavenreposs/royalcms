@@ -1,11 +1,6 @@
 package cn.royalcms.component.model.builder;
 
-import cn.dscmall.component.model.builder.specification.*;
 import cn.royalcms.component.model.builder.specification.*;
-import io.github.mavenreposs.component.model.builder.specification.*;
-import io.github.mavenreposs.model.builder.specification.*;
-import io.github.mavenreposs.royalcms.component.model.builder.specification.*;
-import io.github.mavenreposs.royalcms.model.builder.specification.*;
 import org.springframework.data.domain.Range;
 import org.springframework.data.jpa.domain.Specification;
 
@@ -271,7 +266,7 @@ public class QueryPredicateBuilder<T> {
             if (Objects.equals(predicates.length, 0)) {
                 return null;
             }
-            return BooleanOperator.OR.equals(operator) ? cb.or(predicates) : cb.and(predicates);
+            return Predicate.BooleanOperator.OR.equals(operator) ? cb.or(predicates) : cb.and(predicates);
         };
     }
 

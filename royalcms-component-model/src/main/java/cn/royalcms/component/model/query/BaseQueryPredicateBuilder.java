@@ -1,13 +1,8 @@
 package cn.royalcms.component.model.query;
 
 
+import cn.royalcms.component.facades.RC_Log;
 import cn.royalcms.component.model.query.expression.*;
-import io.github.mavenreposs.royalcms.component.model.query.expression.*;
-import io.github.mavenreposs.royalcms.facades.DSC_Log;
-import cn.dscmall.component.model.query.expression.*;
-import io.github.mavenreposs.component.model.query.expression.*;
-import io.github.mavenreposs.model.query.expression.*;
-import io.github.mavenreposs.royalcms.model.query.expression.*;
 
 import javax.persistence.criteria.*;
 import java.beans.BeanInfo;
@@ -126,7 +121,7 @@ public class BaseQueryPredicateBuilder {
             }
 
         } catch (Exception e) {
-            DSC_Log.object(e);
+            RC_Log.object(e);
         }
 
         // 组合条件
@@ -171,9 +166,9 @@ public class BaseQueryPredicateBuilder {
                 return ((QBindAttrField) anno);
             }
         } catch (SecurityException e) {
-            DSC_Log.error("[BaseQueryPredicateBuilder.getBindAttrName SecurityException:]" + e.getMessage());
+            RC_Log.error("[BaseQueryPredicateBuilder.getBindAttrName SecurityException:]" + e.getMessage());
         } catch (NoSuchFieldException e) {
-            DSC_Log.error("[BaseQueryPredicateBuilder.getBindAttrName NoSuchFieldException:]" + e.getMessage());
+            RC_Log.error("[BaseQueryPredicateBuilder.getBindAttrName NoSuchFieldException:]" + e.getMessage());
         }
         return null;
     }

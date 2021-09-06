@@ -1,12 +1,12 @@
 package cn.royalcms.component.model.impl;
 
+import cn.royalcms.component.facades.RC_Log;
+import cn.royalcms.component.facades.RC_String;
 import cn.royalcms.component.model.BaseRepository;
 import cn.royalcms.component.model.query.BaseQuery;
 import cn.royalcms.component.model.query.BaseQueryPredicateBuilder;
 import cn.royalcms.component.model.query.QueryToSpecification;
-import io.github.mavenreposs.royalcms.facades.DSC_Log;
-import io.github.mavenreposs.royalcms.facades.DSC_String;
-import mavenreposs.illuminate4j.support.Callable;
+import io.github.mavenreposs.illuminate4j.support.Callable;
 import org.springframework.data.domain.Example;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
@@ -176,7 +176,7 @@ public class BaseRepositoryImpl<T, ID extends Serializable>
         Class<Y> clazz;
 
         try {
-            String methodName = "get" + DSC_String.ucfirst(fieldName);
+            String methodName = "get" + RC_String.ucfirst(fieldName);
             Method method = domainClass.getMethod(methodName);
             clazz = (Class<Y>) method.getReturnType();
         } catch (NoSuchMethodException e) {
@@ -484,7 +484,7 @@ public class BaseRepositoryImpl<T, ID extends Serializable>
                 Object o = property.get(t);
                 update.set(fieldName, o);
             } catch (Exception e) {
-                DSC_Log.error("update error:" + e);
+                RC_Log.error("update error:" + e);
             }
         }
         update.where(BaseQueryPredicateBuilder.getPredicate2(root, cb, where));
@@ -509,7 +509,7 @@ public class BaseRepositoryImpl<T, ID extends Serializable>
                 Object o = property.get(t);
                 update.set(fieldName, o);
             } catch (Exception e) {
-                DSC_Log.error("update error:" + e);
+                RC_Log.error("update error:" + e);
             }
         }
         //定位主键信息

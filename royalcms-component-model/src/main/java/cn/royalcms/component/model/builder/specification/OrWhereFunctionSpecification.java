@@ -19,7 +19,7 @@ public class OrWhereFunctionSpecification<T> extends AbstractSpecification<T> {
 
     @Override
     public Predicate toPredicate(Root<T> root, CriteriaQuery<?> query, CriteriaBuilder cb) {
-        QueryPredicateBuilder<T> builder = new QueryPredicateBuilder<>(BooleanOperator.OR);
+        QueryPredicateBuilder<T> builder = new QueryPredicateBuilder<>(Predicate.BooleanOperator.OR);
         builder = function.apply(builder);
         Predicate[] predicates = getPredicates(root, query, cb, builder);
         return cb.and(cb.or(predicates));

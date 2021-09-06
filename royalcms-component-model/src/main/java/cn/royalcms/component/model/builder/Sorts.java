@@ -6,9 +6,6 @@ import org.springframework.data.domain.Sort.Order;
 import java.util.ArrayList;
 import java.util.List;
 
-import static org.springframework.data.domain.Sort.Direction.ASC;
-import static org.springframework.data.domain.Sort.Direction.DESC;
-
 public class Sorts {
 
     public static Builder builder() {
@@ -32,14 +29,14 @@ public class Sorts {
 
         public Builder asc(boolean condition, String property) {
             if (condition) {
-                orders.add(new Order(Direction.ASC, property));
+                orders.add(new Order(Sort.Direction.ASC, property));
             }
             return this;
         }
 
         public Builder desc(boolean condition, String property) {
             if (condition) {
-                orders.add(new Order(Direction.DESC, property));
+                orders.add(new Order(Sort.Direction.DESC, property));
             }
             return this;
         }

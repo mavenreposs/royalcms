@@ -1,6 +1,6 @@
 package cn.royalcms.component.model.query;
 
-import cn.dscmall.component.bean.SpringBeanFactory;
+import cn.royalcms.component.bean.SpringBeanFactory;
 import cn.royalcms.component.model.BaseRepository;
 import org.springframework.core.annotation.AnnotationConfigurationException;
 import org.springframework.data.domain.Page;
@@ -271,7 +271,6 @@ public class BaseQuery {
 
     /**
      * 根据查询条件批量删除相关数据
-     * @param query 查询条件
      * @return 更新结果
      */
     public int delete() {
