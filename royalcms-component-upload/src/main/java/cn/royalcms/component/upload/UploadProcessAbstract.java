@@ -1,4 +1,4 @@
-package io.github.mavenreposs.royalcms.component.upload;
+package cn.royalcms.component.upload;
 
 import org.springframework.web.multipart.MultipartFile;
 

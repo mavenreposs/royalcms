@@ -1,7 +1,7 @@
-package io.github.mavenreposs.royalcms.component.upload;
+package cn.royalcms.component.upload;
 
-import io.github.mavenreposs.royalcms.component.bean.SpringBeanFactory;
-import io.github.mavenreposs.royalcms.component.upload.starter.autoconfigure.AppUploadProperties;
+import cn.royalcms.component.bean.SpringBeanFactory;
+import cn.royalcms.component.upload.starter.autoconfigure.AppUploadProperties;
 import mavenreposs.php.functions.PHPFunctions;
 import org.apache.commons.lang3.ArrayUtils;
 import org.springframework.web.multipart.MultipartFile;
