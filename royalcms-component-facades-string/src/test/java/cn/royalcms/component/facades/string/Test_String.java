@@ -1,10 +1,8 @@
 package cn.royalcms.component.facades.string;
 
-import cn.royalcms.component.facades.RC_Log;
-import cn.royalcms.component.facades.RC_String;
+import cn.royalcms.component.facades.log.RC_Log;
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
-
-import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class Test_String {
 

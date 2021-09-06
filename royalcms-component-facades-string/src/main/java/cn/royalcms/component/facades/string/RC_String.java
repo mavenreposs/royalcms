@@ -1,8 +1,10 @@
 package cn.royalcms.component.facades.string;
 
+import cn.royalcms.component.facades.array.RC_Array;
 import io.github.mavenreposs.illuminate4j.support.CamelCaseUtil;
 import io.github.mavenreposs.illuminate4j.support.Stringable;
 import io.github.mavenreposs.illuminate4j.support.StudlyCache;
+import io.github.mavenreposs.php.functions.PHPFunctions;
 import org.apache.commons.lang3.CharUtils;
 import org.apache.commons.lang3.RandomStringUtils;
 import org.apache.commons.lang3.StringUtils;
