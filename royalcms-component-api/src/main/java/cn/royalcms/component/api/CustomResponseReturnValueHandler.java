@@ -1,4 +1,4 @@
-package io.github.mavenreposs.royalcms.component.api;
+package cn.royalcms.component.api;
 
 import com.fasterxml.jackson.core.JsonParser;
 import com.fasterxml.jackson.databind.ObjectMapper;

@@ -1,4 +1,4 @@
-package io.github.mavenreposs.royalcms.component.api;
+package cn.royalcms.component.api;
 
 public class ApiError extends ApiOperateStatus {
     public ApiError(Integer code, String message) {

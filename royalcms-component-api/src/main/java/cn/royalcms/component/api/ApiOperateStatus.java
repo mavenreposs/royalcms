@@ -1,4 +1,4 @@
-package io.github.mavenreposs.royalcms.component.api;
+package cn.royalcms.component.api;
 
 import java.util.Objects;
 

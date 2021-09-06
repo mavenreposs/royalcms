@@ -1,6 +1,6 @@
-package io.github.mavenreposs.royalcms.component.api;
+package cn.royalcms.component.api;
 
-import io.github.mavenreposs.royalcms.component.facades.RC_Time;
+import cn.royalcms.component.facades.RC_Time;
 
 public class ApiSuccessResponse implements ApiResponseInterface {
 
