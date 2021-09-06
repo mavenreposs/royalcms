@@ -1,4 +1,4 @@
-package io.github.mavenreposs.royalcms.component.config.contracts;
+package cn.royalcms.component.config.contracts;
 
 import java.util.ArrayList;
 import java.util.HashMap;

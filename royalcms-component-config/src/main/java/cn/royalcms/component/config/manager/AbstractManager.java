@@ -1,6 +1,6 @@
-package io.github.mavenreposs.royalcms.component.config.manager;
+package cn.royalcms.component.config.manager;
 
-import io.github.mavenreposs.royalcms.component.config.contracts.ConfigItemRepositoryInterface;
+import cn.royalcms.component.config.contracts.ConfigItemRepositoryInterface;
 
 import java.util.ArrayList;
 

@@ -1,8 +1,8 @@
-package io.github.mavenreposs.royalcms.component.config.proxy;
+package cn.royalcms.component.config.proxy;
 
-import io.github.mavenreposs.royalcms.component.bean.SpringBeanFactory;
-import io.github.mavenreposs.royalcms.component.config.contracts.ConfigItemRepositoryInterface;
-import io.github.mavenreposs.royalcms.component.config.manager.ItemManager;
+import cn.royalcms.component.bean.SpringBeanFactory;
+import cn.royalcms.component.config.contracts.ConfigItemRepositoryInterface;
+import cn.royalcms.component.config.manager.ItemManager;
 
 import java.lang.reflect.InvocationHandler;
 import java.lang.reflect.Method;
