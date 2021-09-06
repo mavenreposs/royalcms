@@ -10,7 +10,6 @@
     <modelVersion>4.0.0</modelVersion>
 
     <artifactId>royalcms-component-bean</artifactId>
-    <version>1.0.0</version>
 
     <properties>
         <maven.compiler.source>11</maven.compiler.source>
