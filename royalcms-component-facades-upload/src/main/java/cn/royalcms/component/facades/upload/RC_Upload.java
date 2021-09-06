@@ -1,6 +1,7 @@
 package cn.royalcms.component.facades.upload;
 
 
+import cn.royalcms.component.facades.storage.RC_Storage;
 import cn.royalcms.component.upload.*;
 
 public class RC_Upload {
