@@ -17,7 +17,6 @@
     <packaging>pom</packaging>
 
     <modules>
-        <module>royalcms-component</module>
         <module>royalcms-component-bean</module>
         <module>royalcms-component-upload</module>
         <module>royalcms-component-contracts</module>
@@ -33,6 +32,18 @@
         <module>royalcms-component-gettext</module>
         <module>royalcms-component-support</module>
         <module>royalcms-component-datetime</module>
+        <module>royalcms-component-facades-gettext</module>
+        <module>royalcms-component-facades-log</module>
+        <module>royalcms-component-facades-time</module>
+        <module>royalcms-component-facades-config</module>
+        <module>royalcms-component-facades-random</module>
+        <module>royalcms-component-facades-bean</module>
+        <module>royalcms-component-facades-event</module>
+        <module>royalcms-component-facades-string</module>
+        <module>royalcms-component-facades-upload</module>
+        <module>royalcms-component-facades-base64</module>
+        <module>royalcms-component-facades-collection</module>
+        <module>royalcms-component-facades-serializer</module>
     </modules>
 
     <properties>
