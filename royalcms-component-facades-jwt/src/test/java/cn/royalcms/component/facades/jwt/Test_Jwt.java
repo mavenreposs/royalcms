@@ -1,7 +1,6 @@
 package cn.royalcms.component.facades.jwt;
 
-import cn.royalcms.component.facades.RC_Jwt;
-import cn.royalcms.component.facades.RC_Log;
+import cn.royalcms.component.facades.log.RC_Log;
 import org.junit.jupiter.api.Test;
 
 import java.util.Map;
