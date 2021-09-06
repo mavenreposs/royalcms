@@ -1,8 +1,8 @@
 package cn.royalcms.component.upload;
 
-import mavenreposs.php.functions.strtotime.DateFormatter;
+import io.github.mavenreposs.php.functions.strtotime.DateFormatter;
 
-import static mavenreposs.php.functions.PHPFunctions.*;
+import static io.github.mavenreposs.php.functions.PHPFunctions.*;
 
 public class RandomFilenameRule implements FilenameRule {
 

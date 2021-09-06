@@ -2,7 +2,7 @@ package cn.royalcms.component.upload;
 
 import java.io.Serializable;
 
-import static mavenreposs.php.functions.PHPFunctions.rtrim;
+import static io.github.mavenreposs.php.functions.PHPFunctions.rtrim;
 
 public enum UploadOption implements Serializable {
 

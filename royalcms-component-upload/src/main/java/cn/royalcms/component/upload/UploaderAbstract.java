@@ -4,8 +4,7 @@ import cn.royalcms.component.contracts.storage.Storage;
 import org.apache.commons.lang3.ArrayUtils;
 import org.springframework.web.multipart.MultipartFile;
 
-import static mavenreposs.php.functions.PHPFunctions.*;
-
+import static io.github.mavenreposs.php.functions.PHPFunctions.*;
 
 public abstract class UploaderAbstract {
 

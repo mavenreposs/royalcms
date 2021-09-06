@@ -1,10 +1,11 @@
 package cn.royalcms.component.upload;
 
-import mavenreposs.php.functions.strtotime.DateFormatter;
+import io.github.mavenreposs.php.functions.strtotime.DateFormatter;
 
 import java.io.File;
 
-import static mavenreposs.php.functions.PHPFunctions.*;
+import static io.github.mavenreposs.php.functions.PHPFunctions.date;
+import static io.github.mavenreposs.php.functions.PHPFunctions.time;
 
 public class UploadSubDirRule implements SubDirnameRule {
     @Override
