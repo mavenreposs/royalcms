@@ -1,4 +1,4 @@
-package cn.royalcms.component.facades;
+package cn.royalcms.component.facades.jwt;
 
 import cn.royalcms.component.jwt.JwtPayload;
 import io.jsonwebtoken.*;
