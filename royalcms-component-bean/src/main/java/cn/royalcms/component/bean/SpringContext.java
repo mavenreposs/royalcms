@@ -1,4 +1,4 @@
-package io.github.mavenreposs.royalcms.component.bean;
+package cn.royalcms.component.bean;
 
 import org.springframework.context.ApplicationContext;
 
