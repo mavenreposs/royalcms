@@ -1,6 +1,6 @@
-package cn.royalcms.component.facades.json;
+package cn.royalcms.facades.json;
 
-import cn.royalcms.component.facades.log.RC_Log;
+import cn.royalcms.facades.log.RC_Log;
 import com.google.gson.reflect.TypeToken;
 import org.junit.jupiter.api.Test;
 

@@ -1,4 +1,4 @@
-package cn.royalcms.component.facades.json;
+package cn.royalcms.facades.json;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
