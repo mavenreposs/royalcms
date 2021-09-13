@@ -1,6 +1,6 @@
 package cn.royalcms.component.datetime;
 
-import cn.royalcms.component.facades.log.RC_Logger;
+import cn.royalcms.facades.log.RC_Logger;
 import org.apache.commons.lang3.time.DateUtils;
 
 import java.text.ParseException;
