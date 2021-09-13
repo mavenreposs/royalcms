@@ -1,4 +1,4 @@
-package cn.royalcms.component.contracts.storage;
+package cn.royalcms.contracts.storage;
 
 public interface Cloud extends Storage {
 
