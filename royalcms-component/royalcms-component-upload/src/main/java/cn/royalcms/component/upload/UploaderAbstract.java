@@ -1,6 +1,6 @@
 package cn.royalcms.component.upload;
 
-import cn.royalcms.component.contracts.storage.Storage;
+import cn.royalcms.contracts.storage.Storage;
 import org.apache.commons.lang3.ArrayUtils;
 import org.springframework.web.multipart.MultipartFile;
 
