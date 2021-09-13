@@ -1,7 +1,7 @@
 package cn.royalcms.component.model.impl;
 
-import cn.royalcms.component.facades.log.RC_Log;
-import cn.royalcms.component.facades.string.RC_String;
+import cn.royalcms.facades.log.RC_Log;
+import cn.royalcms.facades.string.RC_String;
 import cn.royalcms.component.model.BaseRepository;
 import cn.royalcms.component.model.query.BaseQuery;
 import cn.royalcms.component.model.query.BaseQueryPredicateBuilder;
