@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>io.github.mavenreposs</groupId>
-    <artifactId>royalcms-component-dependencies</artifactId>
+    <artifactId>royalcms-dependencies</artifactId>
     <version>1.0.0</version>
 
     <properties>
