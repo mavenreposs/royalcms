@@ -1,4 +1,4 @@
-package cn.royalcms.component.facades.collection;
+package cn.royalcms.facades.collection;
 
 import java.util.*;
 import java.util.function.Function;
