@@ -1,4 +1,4 @@
-package cn.royalcms.component.facades.array;
+package cn.royalcms.facades.array;
 
 
 import org.apache.commons.lang3.ArrayUtils;
