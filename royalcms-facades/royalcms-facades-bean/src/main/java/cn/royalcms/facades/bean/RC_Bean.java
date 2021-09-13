@@ -1,4 +1,4 @@
-package cn.royalcms.component.facades.bean;
+package cn.royalcms.facades.bean;
 
 
 import cn.royalcms.component.bean.SpringBeanFactory;
