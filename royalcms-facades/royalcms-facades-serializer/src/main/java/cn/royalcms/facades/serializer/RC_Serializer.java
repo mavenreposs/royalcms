@@ -1,4 +1,4 @@
-package cn.royalcms.component.facades.serializer;
+package cn.royalcms.facades.serializer;
 
 import cn.stackbox.phpserialize.PhpDecoder;
 import com.alibaba.fastjson.JSONArray;

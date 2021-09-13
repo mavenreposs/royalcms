@@ -1,6 +1,6 @@
-package cn.royalcms.component.facades.serializer;
+package cn.royalcms.facades.serializer;
 
-import cn.royalcms.component.facades.log.RC_Log;
+import cn.royalcms.facades.log.RC_Log;
 import cn.stackbox.phpserialize.PhpDecoder;
 import com.alibaba.fastjson.JSONArray;
 import org.junit.jupiter.api.Assertions;
