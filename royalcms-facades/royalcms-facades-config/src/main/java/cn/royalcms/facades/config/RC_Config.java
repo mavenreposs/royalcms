@@ -1,8 +1,8 @@
-package cn.royalcms.component.facades.config;
+package cn.royalcms.facades.config;
 
 import cn.royalcms.component.config.contracts.ConfigItemRepositoryInterface;
 import cn.royalcms.component.config.proxy.ConfigInvocationHandler;
-import cn.royalcms.component.facades.serializer.RC_Serializer;
+import cn.royalcms.facades.serializer.RC_Serializer;
 
 import java.lang.reflect.Proxy;
 import java.util.ArrayList;
