@@ -11,9 +11,24 @@
 
     <artifactId>royalcms-component</artifactId>
 
+    <packaging>pom</packaging>
+
     <properties>
         <maven.compiler.source>11</maven.compiler.source>
         <maven.compiler.target>11</maven.compiler.target>
     </properties>
+
+    <modules>
+        <module>royalcms-component-api</module>
+        <module>royalcms-component-bean</module>
+        <module>royalcms-component-config</module>
+        <module>royalcms-component-datetime</module>
+        <module>royalcms-component-gettext</module>
+        <module>royalcms-component-jwt</module>
+        <module>royalcms-component-model</module>
+        <module>royalcms-component-storage</module>
+        <module>royalcms-component-support</module>
+        <module>royalcms-component-upload</module>
+    </modules>
 
 </project>
