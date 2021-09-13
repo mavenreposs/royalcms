@@ -1,4 +1,4 @@
-package cn.royalcms.component.facades.random;
+package cn.royalcms.facades.random;
 
 import org.apache.commons.lang3.RandomStringUtils;
 
