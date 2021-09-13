@@ -1,4 +1,4 @@
-package cn.royalcms.component.facades.gettext;
+package cn.royalcms.facades.gettext;
 
 import cn.royalcms.component.gettext.GettextResource;
 import org.xnap.commons.i18n.I18n;
