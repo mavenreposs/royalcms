@@ -1,7 +1,7 @@
 package cn.royalcms.component.api;
 
 
-import cn.royalcms.component.facades.time.RC_Time;
+import cn.royalcms.facades.time.RC_Time;
 
 public class ApiSuccessResponse implements ApiResponseInterface {
 
