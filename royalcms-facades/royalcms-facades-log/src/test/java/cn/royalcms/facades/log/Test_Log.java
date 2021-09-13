@@ -1,4 +1,4 @@
-package cn.royalcms.component.facades.log;
+package cn.royalcms.facades.log;
 
 import org.junit.jupiter.api.Test;
 
