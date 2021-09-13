@@ -1,6 +1,6 @@
-package cn.royalcms.component.facades.string;
+package cn.royalcms.facades.string;
 
-import cn.royalcms.component.facades.array.RC_Array;
+import cn.royalcms.facades.array.RC_Array;
 import io.github.mavenreposs.illuminate4j.support.CamelCaseUtil;
 import io.github.mavenreposs.illuminate4j.support.Stringable;
 import io.github.mavenreposs.illuminate4j.support.StudlyCache;

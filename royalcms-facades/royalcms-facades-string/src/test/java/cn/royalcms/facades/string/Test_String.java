@@ -1,6 +1,6 @@
-package cn.royalcms.component.facades.string;
+package cn.royalcms.facades.string;
 
-import cn.royalcms.component.facades.log.RC_Log;
+import cn.royalcms.facades.log.RC_Log;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
