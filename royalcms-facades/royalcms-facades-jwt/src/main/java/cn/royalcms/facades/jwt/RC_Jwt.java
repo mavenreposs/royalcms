@@ -1,7 +1,7 @@
-package cn.royalcms.component.facades.jwt;
+package cn.royalcms.facades.jwt;
 
-import cn.royalcms.component.facades.base64.RC_Base64;
-import cn.royalcms.component.facades.time.RC_Time;
+import cn.royalcms.facades.base64.RC_Base64;
+import cn.royalcms.facades.time.RC_Time;
 import cn.royalcms.component.jwt.JwtPayload;
 import io.jsonwebtoken.*;
 import io.jsonwebtoken.io.Decoders;
