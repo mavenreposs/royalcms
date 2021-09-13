@@ -39,6 +39,9 @@
         <module>royalcms-component-facades-collection</module>
         <module>royalcms-component-facades-serializer</module>
         <module>royalcms-component-dependencies</module>
+        <module>royalcms-facades</module>
+        <module>royalcms-contracts</module>
+        <module>royalcms-component</module>
     </modules>
 
     <properties>
