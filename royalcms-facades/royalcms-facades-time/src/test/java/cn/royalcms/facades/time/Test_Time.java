@@ -1,4 +1,4 @@
-package cn.royalcms.component.facades.time;
+package cn.royalcms.facades.time;
 
 import org.junit.jupiter.api.Test;
 

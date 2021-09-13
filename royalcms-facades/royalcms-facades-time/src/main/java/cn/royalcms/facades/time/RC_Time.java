@@ -1,4 +1,4 @@
-package cn.royalcms.component.facades.time;
+package cn.royalcms.facades.time;
 
 import io.github.mavenreposs.php.functions.strtotime.StrToTime;
 
