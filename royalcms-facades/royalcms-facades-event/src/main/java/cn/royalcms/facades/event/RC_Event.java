@@ -1,4 +1,4 @@
-package cn.royalcms.component.facades.event;
+package cn.royalcms.facades.event;
 
 import cn.royalcms.component.bean.SpringBeanFactory;
 import org.springframework.context.ApplicationEvent;
