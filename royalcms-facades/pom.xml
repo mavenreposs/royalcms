@@ -11,9 +11,30 @@
 
     <artifactId>royalcms-facades</artifactId>
 
+    <packaging>pom</packaging>
+
     <properties>
         <maven.compiler.source>11</maven.compiler.source>
         <maven.compiler.target>11</maven.compiler.target>
     </properties>
+
+    <modules>
+        <module>royalcms-facades-array</module>
+        <module>royalcms-facades-base64</module>
+        <module>royalcms-facades-bean</module>
+        <module>royalcms-facades-collection</module>
+        <module>royalcms-facades-config</module>
+        <module>royalcms-facades-event</module>
+        <module>royalcms-facades-gettext</module>
+        <module>royalcms-facades-json</module>
+        <module>royalcms-facades-jwt</module>
+        <module>royalcms-facades-log</module>
+        <module>royalcms-facades-random</module>
+        <module>royalcms-facades-serializer</module>
+        <module>royalcms-facades-storage</module>
+        <module>royalcms-facades-string</module>
+        <module>royalcms-facades-time</module>
+        <module>royalcms-facades-upload</module>
+    </modules>
 
 </project>
