@@ -1,8 +1,8 @@
-package cn.royalcms.component.facades.storage;
+package cn.royalcms.facades.storage;
 
 import cn.royalcms.component.bean.SpringBeanFactory;
-import cn.royalcms.component.contracts.storage.Cloud;
-import cn.royalcms.component.contracts.storage.Storage;
+import cn.royalcms.contracts.storage.Cloud;
+import cn.royalcms.contracts.storage.Storage;
 import cn.royalcms.component.support.DriverManager;
 
 import java.util.Optional;
