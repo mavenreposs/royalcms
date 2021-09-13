@@ -1,4 +1,4 @@
-package cn.royalcms.component.facades.base64;
+package cn.royalcms.facades.base64;
 
 import io.jsonwebtoken.io.Decoders;
 import io.jsonwebtoken.io.Encoders;
