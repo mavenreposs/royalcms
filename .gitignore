@@ -2,3 +2,16 @@
 royalcms-component-bean/target
 royalcms-component-contracts/target
 royalcms-component-upload/target
+royalcms-facades/royalcms-facades-array/target
+royalcms-facades/royalcms-facades-base64/target
+royalcms-facades/royalcms-facades-bean/target
+royalcms-facades/royalcms-facades-collection/target
+royalcms-facades/royalcms-facades-config/target
+royalcms-facades/royalcms-facades-event/target
+royalcms-facades/royalcms-facades-gettext/target
+royalcms-facades/royalcms-facades-serializer/target
+royalcms-facades/royalcms-facades-log/target
+royalcms-dependencies/target
+royalcms-component/royalcms-component-gettext/target
+royalcms-component/royalcms-component-config/target
+royalcms-component/royalcms-component-bean/target
