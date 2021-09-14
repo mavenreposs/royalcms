@@ -63,7 +63,9 @@ public class UploadProcess extends UploadProcessAbstract {
      * 保存指定文件
      *
      * @param file MultipartFile
+     * @param result UploadResult
      * @return boolean 保存状态，true-成功，false-失败
+     * @throws UploadException 上传异常
      */
     protected boolean save(MultipartFile file, UploadResult result) throws UploadException {
         return save(file, result, true);
@@ -73,8 +75,10 @@ public class UploadProcess extends UploadProcessAbstract {
      * 保存指定文件
      *
      * @param file MultipartFile
+     * @param result UploadResult
      * @param replace 同名文件是否覆盖
      * @return boolean 保存状态，true-成功，false-失败
+     * @throws UploadException 上传异常
      */
     protected boolean save(MultipartFile file, UploadResult result, Boolean replace) throws UploadException {
         /* 不覆盖同名文件 */

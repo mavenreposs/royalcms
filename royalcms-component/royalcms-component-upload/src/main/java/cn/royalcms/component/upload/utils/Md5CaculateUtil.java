@@ -13,6 +13,7 @@ public class Md5CaculateUtil {
 
     /**
      * 获取一个文件的md5值(可处理大文件)
+     * @param file File
      * @return md5 value
      */
     public static String getFileMD5(File file) {
@@ -42,6 +43,7 @@ public class Md5CaculateUtil {
 
     /**
      * 获取一个文件的md5值(可处理大文件)
+     * @param fileInputStream FileInputStream
      * @return md5 value
      */
     public static String getFileMD5(FileInputStream fileInputStream) {
@@ -69,6 +71,7 @@ public class Md5CaculateUtil {
 
     /**
      * 获取一个文件的md5值(可处理大文件)
+     * @param inputStream InputStream
      * @return md5 value
      */
     public static String getFileMD5(InputStream inputStream) {

@@ -81,6 +81,7 @@ public class Uploader extends UploaderAbstract {
      * 检查文件是否符合上传条件
      * @param uploadFile MultipartFile
      * @return boolean
+     * @throws UploadException 上传异常
      */
     public boolean checkedUploadFile(MultipartFile uploadFile) throws UploadException {
         if (! checkSize(uploadFile.getSize())) {

@@ -14,6 +14,7 @@ public class Sha1CaculateUtil {
 
     /**
      * 获取一个文件的md5值(可处理大文件)
+     * @param file File
      * @return md5 value
      */
     public static String getFileSha1(File file) {
@@ -43,6 +44,7 @@ public class Sha1CaculateUtil {
 
     /**
      * 获取一个文件的md5值(可处理大文件)
+     * @param fileInputStream FileInputStream
      * @return md5 value
      */
     public static String getFileSha1(FileInputStream fileInputStream) {
@@ -70,6 +72,7 @@ public class Sha1CaculateUtil {
 
     /**
      * 获取一个文件的md5值(可处理大文件)
+     * @param inputStream InputStream
      * @return md5 value
      */
     public static String getFileSha1(InputStream inputStream) {

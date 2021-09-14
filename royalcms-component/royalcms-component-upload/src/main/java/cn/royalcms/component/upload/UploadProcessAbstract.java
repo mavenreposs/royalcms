@@ -17,6 +17,7 @@ public abstract class UploadProcessAbstract {
      * 上传文件
      * @param file MultipartFile
      * @return boolean
+     * @throws UploadException 上传异常
      */
     public abstract UploadResult upload(MultipartFile file) throws UploadException;
 

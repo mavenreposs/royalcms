@@ -80,6 +80,7 @@ public abstract class UploaderAbstract {
      * 检查上传的文件后缀是否合法
      *
      * @param ext 文件后缀
+     * @return boolean
      */
     public boolean checkExtension(String ext) {
         ext = ltrim(ext, ".");
@@ -95,6 +96,7 @@ public abstract class UploaderAbstract {
      * 检查上传的文件MIME类型是否合法
      *
      * @param mime 数据
+     * @return boolean
      */
     public boolean checkMime(String mime) {
         if (allowedMimes.length == 0) {
@@ -108,6 +110,7 @@ public abstract class UploaderAbstract {
      * 检查文件大小是否合法
      *
      * @param size 数据大小
+     * @return boolean
      */
     public boolean checkSize(long size) {
         if (uploadOption.getMaxSize() == 0) {
@@ -122,6 +125,7 @@ public abstract class UploaderAbstract {
      *
      * @param file 单个文件信息
      * @return array|bool 上传成功后的文件信息
+     * @throws UploadException 上传异常
      */
     abstract public UploadResult upload(MultipartFile file) throws UploadException;
 
@@ -129,6 +133,8 @@ public abstract class UploaderAbstract {
      * 上传多个文件
      *
      * @param files 多个文件信息
+     * @return UploadResult
+     * @throws UploadException 上传异常
      */
     abstract public UploadResult[] multiUpload(MultipartFile[] files) throws UploadException;
 
