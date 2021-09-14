@@ -54,6 +54,8 @@ public final class RC_Config {
 
     /**
      * Clean the caches.
+     *
+     * @return Boolean
      */
     public static Boolean clearCache() {
         return getSingleton().repository.clearCache();
