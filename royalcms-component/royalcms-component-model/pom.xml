@@ -37,6 +37,10 @@
             <groupId>io.github.mavenreposs</groupId>
             <artifactId>royalcms-component-bean</artifactId>
         </dependency>
+        <dependency>
+            <groupId>com.google.code.findbugs</groupId>
+            <artifactId>annotations</artifactId>
+        </dependency>
     </dependencies>
 
 </project>
