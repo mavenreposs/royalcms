@@ -235,6 +235,8 @@ public class DateTimeUtils {
      * Get localized date string
      *
      * @param date Date string
+     * @param style DateTimeStyle
+     * @param locale Locale
      * @return Formatted localized date string
      */
     public static String formatWithStyle(Date date, DateTimeStyle style, Locale locale) {
@@ -248,6 +250,8 @@ public class DateTimeUtils {
      * Get localized date string (Using default locale)
      *
      * @param date Date string
+     * @param style DateTimeStyle
+     * @param locale Locale
      * @return Formatted localized date string
      */
     public static String formatWithStyle(String date, DateTimeStyle style, Locale locale) {
@@ -258,6 +262,7 @@ public class DateTimeUtils {
      * Get localized date string (Using default locale)
      *
      * @param date Date string
+     * @param style DateTimeStyle
      * @return Formatted localized date string
      */
     public static String formatWithStyle(Date date, DateTimeStyle style) {
@@ -268,6 +273,7 @@ public class DateTimeUtils {
      * Get localized date string (Using default locale)
      *
      * @param date Date string
+     * @param style DateTimeStyle
      * @return Formatted localized date string
      */
     public static String formatWithStyle(String date, DateTimeStyle style) {
@@ -278,6 +284,7 @@ public class DateTimeUtils {
      * Extract time from date without seconds
      *
      * @param date Date object
+     * @param forceShowHours boolean
      * @return Time String
      * @see DateTimeFormat#TIME_PATTERN_1
      */
@@ -300,6 +307,7 @@ public class DateTimeUtils {
      * Extract time from date without seconds
      *
      * @param date Date object
+     * @param forceShowHours boolean
      * @return Time string
      */
     public static String formatTime(String date, boolean forceShowHours) {
