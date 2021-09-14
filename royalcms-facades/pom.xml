@@ -27,7 +27,6 @@
         <module>royalcms-facades-event</module>
         <module>royalcms-facades-gettext</module>
         <module>royalcms-facades-json</module>
-        <module>royalcms-facades-jwt</module>
         <module>royalcms-facades-log</module>
         <module>royalcms-facades-random</module>
         <module>royalcms-facades-serializer</module>
