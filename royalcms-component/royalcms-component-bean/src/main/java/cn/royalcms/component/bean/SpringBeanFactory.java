@@ -24,6 +24,8 @@ public class SpringBeanFactory implements ApplicationContextAware {
 
     /**
      * 获取applicationContext
+     * 
+     * @return ApplicationContext
      */
     public static ApplicationContext getApplicationContext() {
         if (applicationContext == null) {
