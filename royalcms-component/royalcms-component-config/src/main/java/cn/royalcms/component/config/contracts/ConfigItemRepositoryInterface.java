@@ -19,13 +19,15 @@ public interface ConfigItemRepositoryInterface {
 
     /**
      * Clean the caches.
+     *
+     * @return Boolean
      */
     Boolean clearCache();
 
     /**
      * Get the all Items.
      *
-     * @return array
+     * @return HashMap
      */
     HashMap<String, Object> all();
 

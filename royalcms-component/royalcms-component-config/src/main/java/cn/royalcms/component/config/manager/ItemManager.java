@@ -22,10 +22,10 @@ public class ItemManager extends AbstractManager {
 
     /**
      * Get the all Items.
-     * @return HashMap<String, String>
+     *
+     * @return HashMap
      */
-    public HashMap<String, Object> all()
-    {
+    public HashMap<String, Object> all() {
         return this.getRepository().all();
     }
 
@@ -33,23 +33,21 @@ public class ItemManager extends AbstractManager {
     /**
      * Get the specified configuration value.
      *
-     * @param  key Key
-     * @return <T>
+     * @param key Key
+     * @return Object
      */
-    public Object get(String key)
-    {
+    public Object get(String key) {
         return this.getRepository().get(key);
     }
 
     /**
      * Get the specified configuration value.
      *
-     * @param  key Key
-     * @param  defaultValue Value
-     * @return <T>
+     * @param key          Key
+     * @param defaultValue Value
+     * @return Object
      */
-    public Object get(String key, Object defaultValue)
-    {
+    public Object get(String key, Object defaultValue) {
         return this.getRepository().get(key, defaultValue);
     }
 
@@ -57,11 +55,10 @@ public class ItemManager extends AbstractManager {
     /**
      * Set a given configuration value.
      *
-     * @param  key Key
-     * @param  value Value
+     * @param key   Key
+     * @param value Value
      */
-    public void set(String key, Object value)
-    {
+    public void set(String key, Object value) {
         this.getRepository().set(key, value);
     }
 
@@ -69,22 +66,20 @@ public class ItemManager extends AbstractManager {
     /**
      * Write a given configuration value.
      *
-     * @param key Key
+     * @param key   Key
      * @param value Value
      */
-    public void write(String key, Object value)
-    {
+    public void write(String key, Object value) {
         this.getRepository().write(key, value);
     }
 
     /**
      * Determine if the given configuration value exists.
      *
-     * @param  key Key
+     * @param key Key
      * @return bool
      */
-    public Boolean has(String key)
-    {
+    public Boolean has(String key) {
         return this.getRepository().has(key);
     }
 
@@ -93,26 +88,24 @@ public class ItemManager extends AbstractManager {
      * 添加配置项
      *
      * @param group Group
-     * @param key Key
+     * @param key   Key
      * @param value Value
      * @return bool
      */
-    public Boolean add(String group, String key, Object value)
-    {
+    public Boolean add(String group, String key, Object value) {
         return this.getRepository().add(group, key, value);
     }
 
     /**
      * 添加配置项
      *
-     * @param group Group
-     * @param key Key
-     * @param value Value
+     * @param group   Group
+     * @param key     Key
+     * @param value   Value
      * @param options HashMap
      * @return bool
      */
-    public Boolean add(String group, String key, Object value, HashMap<String, String> options)
-    {
+    public Boolean add(String group, String key, Object value, HashMap<String, String> options) {
         return this.getRepository().add(group, key, value, options);
     }
 
@@ -120,36 +113,34 @@ public class ItemManager extends AbstractManager {
      * 修改配置项
      *
      * @param group Group
-     * @param key Key
+     * @param key   Key
      * @param value Value
      * @return bool
      */
-    public Boolean change(String group, String key, Object value)
-    {
+    public Boolean change(String group, String key, Object value) {
         return this.getRepository().change(group, key, value);
     }
 
     /**
      * 修改配置项
      *
-     * @param group Group
-     * @param key Key
-     * @param value Value
+     * @param group   Group
+     * @param key     Key
+     * @param value   Value
      * @param options HashMap
      * @return bool
      */
-    public Boolean change(String group, String key, Object value, HashMap<String, String> options)
-    {
+    public Boolean change(String group, String key, Object value, HashMap<String, String> options) {
         return this.getRepository().change(group, key, value, options);
     }
 
     /**
      * 删除某个配置项
+     *
      * @param key Key
      * @return bool
      */
-    public Boolean delete(String key)
-    {
+    public Boolean delete(String key) {
         return this.getRepository().delete(key);
     }
 

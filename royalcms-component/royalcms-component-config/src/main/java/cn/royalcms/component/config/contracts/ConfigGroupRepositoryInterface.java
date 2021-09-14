@@ -12,7 +12,7 @@ public interface ConfigGroupRepositoryInterface {
     /**
      * 获取所有的组
      *
-     * @return
+     * @return HashMap
      */
     HashMap<String, Integer> allGroups();
 
@@ -21,16 +21,16 @@ public interface ConfigGroupRepositoryInterface {
     /**
      * 根据code删除一个组
      *
-     * @param code
-     * @return
+     * @param code String
+     * @return Boolean
      */
     Boolean deleteGroup(String code);
 
     /**
      * 根据code判断是否有指定的组
      *
-     * @param code
-     * @return
+     * @param code String
+     * @return Boolean
      */
     Boolean hasGroup(String code);
 

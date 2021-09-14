@@ -22,6 +22,7 @@ public abstract class AbstractManager implements ConfigItemRepositoryInterface {
 
     /**
      * Get the config repository instance.
+     * @return ConfigItemRepositoryInterface
      */
     public ConfigItemRepositoryInterface getRepository() {
         return this.repository;
@@ -38,6 +39,8 @@ public abstract class AbstractManager implements ConfigItemRepositoryInterface {
 
     /**
      * Clean the caches.
+     *
+     * @return Boolean
      */
     public Boolean clearCache() {
         return this.getRepository().clearCache();
