@@ -51,7 +51,7 @@ public class RC_Json {
 
     /**
      * Google Gson
-     * @param jsonInString
+     * @param jsonInString JSON字符串
      * @return boolean
      */
     public static boolean isJson(String jsonInString) {
