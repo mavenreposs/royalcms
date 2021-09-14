@@ -11,15 +11,11 @@ public interface Storage {
 
     /**
      * The public visibility setting.
-     *
-     * @var string
      */
     public static final String VISIBILITY_PUBLIC = "public";
 
     /**
      * The private visibility setting.
-     *
-     * @var string
      */
     public static final String VISIBILITY_PRIVATE = "private";
 
@@ -63,7 +59,7 @@ public interface Storage {
     /**
      * Determine if a file exists.
      *
-     * @param  path
+     * @param  path String
      * @return bool
      */
     boolean exists(String path);
@@ -71,24 +67,26 @@ public interface Storage {
     /**
      * Get the contents of a file.
      *
-     * @param  path
+     * @param  path String
      * @return string
+     * @throws IOException IOException
      */
     String get(String path) throws IOException;
 
     /**
      * Get a resource to read the file.
      *
-     * @param  path
+     * @param  path String
      * @return resource|null The path resource or null on failure.
+     * @throws IOException IOException
      */
     byte[] readStream(String path) throws IOException;
 
     /**
      * Write the contents of a file.
      *
-     * @param  path
-     * @param  contents
+     * @param  path String
+     * @param  contents String
      * @return bool
      */
     boolean put(String path, String contents);
@@ -96,8 +94,8 @@ public interface Storage {
     /**
      * Write the contents of a file.
      *
-     * @param  path
-     * @param  contents
+     * @param  path String
+     * @param  contents byte[]
      * @return bool
      */
     boolean put(String path, byte[] contents);
@@ -105,9 +103,9 @@ public interface Storage {
     /**
      * Write the contents of a file.
      *
-     * @param  path
-     * @param  contents
-     * @param  options
+     * @param  path byte[]
+     * @param  contents InputStream
+     * @param  options Map
      * @return bool
      */
     boolean put(String path, InputStream contents, Map<String, Object> options);
@@ -126,8 +124,8 @@ public interface Storage {
     /**
      * Write a new file using a stream.
      *
-     * @param  path
-     * @param  resource
+     * @param  path String
+     * @param  resource InputStream
      * @return bool
      */
     boolean writeStream(String path, InputStream resource);
@@ -135,9 +133,9 @@ public interface Storage {
     /**
      * Write a new file using a stream.
      *
-     * @param  path
-     * @param  resource
-     * @param  options
+     * @param  path String
+     * @param  resource InputStream
+     * @param  options Map
      * @return bool
      */
     boolean writeStream(String path, InputStream resource, Map<String, Object> options);
@@ -145,7 +143,7 @@ public interface Storage {
     /**
      * Get the visibility for the given path.
      *
-     * @param  path
+     * @param  path String
      * @return string
      */
     String getVisibility(String path);
@@ -153,8 +151,8 @@ public interface Storage {
     /**
      * Set the visibility for the given path.
      *
-     * @param  path
-     * @param  visibility
+     * @param  path String
+     * @param  visibility String
      * @return bool
      */
     boolean setVisibility(String path, String visibility);
@@ -162,8 +160,8 @@ public interface Storage {
     /**
      * Prepend to a file.
      *
-     * @param  path
-     * @param  data
+     * @param  path String
+     * @param  data String
      * @return bool
      */
     boolean prepend(String path, String data);
@@ -171,8 +169,8 @@ public interface Storage {
     /**
      * Append to a file.
      *
-     * @param  path
-     * @param  data
+     * @param  path String
+     * @param  data String
      * @return bool
      */
     boolean append(String path, String data);
@@ -180,7 +178,7 @@ public interface Storage {
     /**
      * Delete the file at a given path.
      *
-     * @param  paths
+     * @param  paths String
      * @return bool
      */
     boolean delete(String paths);
@@ -188,7 +186,7 @@ public interface Storage {
     /**
      * Delete the file at a given path.
      *
-     * @param  paths
+     * @param  paths String
      * @return bool
      */
     boolean delete(String... paths);
@@ -196,8 +194,8 @@ public interface Storage {
     /**
      * Copy a file to a new location.
      *
-     * @param  from
-     * @param  to
+     * @param  from String
+     * @param  to String
      * @return bool
      */
     boolean copy(String from, String to);
@@ -205,8 +203,8 @@ public interface Storage {
     /**
      * Move a file to a new location.
      *
-     * @param  from
-     * @param  to
+     * @param  from String
+     * @param  to String
      * @return bool
      */
     boolean move(String from, String to);
@@ -214,7 +212,7 @@ public interface Storage {
     /**
      * Get the file size of a given file.
      *
-     * @param  path
+     * @param  path String
      * @return int
      */
     long size(String path);
@@ -222,7 +220,7 @@ public interface Storage {
     /**
      * Get the file's last modification time.
      *
-     * @param  path
+     * @param  path String
      * @return int
      */
     long lastModified(String path);
@@ -261,7 +259,7 @@ public interface Storage {
     /**
      * Get all of the files from the given directory (recursive).
      *
-     * @param  directory
+     * @param  directory String
      * @return array
      */
     Collection<File> allFiles(String directory);
@@ -276,7 +274,7 @@ public interface Storage {
     /**
      * Get all of the directories within a given directory.
      *
-     * @param  directory
+     * @param  directory String
      * @return array
      */
     Collection<File> directories(String directory);
@@ -300,7 +298,7 @@ public interface Storage {
     /**
      * Get all (recursive) of the directories within a given directory.
      *
-     * @param  directory
+     * @param  directory String
      * @return array
      */
     Collection<File> allDirectories(String directory);
@@ -308,7 +306,7 @@ public interface Storage {
     /**
      * Create a directory.
      *
-     * @param  path
+     * @param  path String
      * @return bool
      */
     boolean makeDirectory(String path);
@@ -316,7 +314,7 @@ public interface Storage {
     /**
      * Recursively delete a directory.
      *
-     * @param  directory
+     * @param  directory String
      * @return bool
      */
     boolean deleteDirectory(String directory);
