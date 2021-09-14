@@ -40,7 +40,7 @@ public class RC_Base64 {
 
     /**
      * Base64 url兼容 编码
-     * @param base64EncodedSecretKey
+     * @param base64EncodedSecretKey base64编码过的key
      * @return 普通字符串
      */
     public static String base64url_decode(String base64EncodedSecretKey) {
