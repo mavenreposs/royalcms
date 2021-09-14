@@ -1,6 +1,6 @@
 package cn.royalcms.component.jwt;
 
-import cn.royalcms.facades.jwt.RC_Jwt;
+import cn.royalcms.component.jwt.facades.RC_Jwt;
 import cn.royalcms.facades.log.RC_Log;
 import cn.royalcms.facades.log.RC_Logger;
 import io.jsonwebtoken.*;
