@@ -29,6 +29,8 @@ public class RC_Jwt {
 
     /**
      * 加密
+     * @param data Map
+     * @param secretKey String
      * @return string
      */
     public static String encode(Map<String, Object> data, String secretKey) {
@@ -40,6 +42,9 @@ public class RC_Jwt {
 
     /**
      * 加密
+     * @param data Map
+     * @param secretKey String
+     * @param jwtPayload JwtPayload
      * @return string
      */
     public static String encode(Map<String, Object> data, String secretKey, JwtPayload jwtPayload) {
@@ -78,6 +83,8 @@ public class RC_Jwt {
 
     /**
      * 加密
+     * @param data Map
+     * @param base64EncodedSecretKey String
      * @return string
      */
     public static String encodeBase64(Map<String, Object> data, String base64EncodedSecretKey) {
@@ -89,6 +96,9 @@ public class RC_Jwt {
 
     /**
      * 加密
+     * @param data Map
+     * @param base64EncodedSecretKey String
+     * @param jwtPayload JwtPayload
      * @return string
      */
     public static String encodeBase64(Map<String, Object> data, String base64EncodedSecretKey, JwtPayload jwtPayload) {
@@ -128,6 +138,9 @@ public class RC_Jwt {
 
     /**
      * 解密
+     * @param token String
+     * @param secretKey String
+     * @return Map
      */
     public static Map<String, Object> decode(String token, String secretKey) {
         String base64EncodedSecretKey = RC_Base64.base64_encode(secretKey);
@@ -138,6 +151,9 @@ public class RC_Jwt {
 
     /**
      * 解密
+     * @param token String
+     * @param base64EncodedSecretKey String
+     * @return Map
      */
     public static Map<String, Object> decodeBase64(String token, String base64EncodedSecretKey) {
         JwtParser parser = Jwts.parser();

@@ -199,6 +199,7 @@ public class JwtUserToken {
     /**
      * 获取用户编号
      * @param token jwt token
+     * @return Integer
      */
     @SuppressWarnings("unchecked")
     public Integer getUserIdFromToken(String token) {
