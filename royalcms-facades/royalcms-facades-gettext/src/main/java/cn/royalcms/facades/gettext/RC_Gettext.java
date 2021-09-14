@@ -21,19 +21,18 @@ public class RC_Gettext {
         return singleton;
     }
 
-    private RC_Gettext() {}
+    private RC_Gettext() {
+    }
 
     public I18n getCurrentGettext() {
         return i18n;
     }
 
     /**
-     *
      * @param basename my.package.Message
-     * @param locale zh_CN
+     * @param locale   zh_CN
      */
-    public void setCurrentGettext(String basename, Locale locale)
-    {
+    public void setCurrentGettext(String basename, Locale locale) {
         i18n = new I18n(basename, locale, GettextResource.class.getClassLoader());
     }
 
@@ -43,8 +42,9 @@ public class RC_Gettext {
      * this function.
      *
      * @param text text to translate
-     * @return the translation
+     *
      * @since 0.9
+     * @return the translation
      */
     public static String tr(String text) {
         return getSingleton().i18n.tr(text);
@@ -62,8 +62,9 @@ public class RC_Gettext {
      *
      * @param text    text to translate
      * @param objects arguments to <code>MessageFormat.format()</code>
-     * @return the translated text
+     *
      * @since 0.9
+     * @return the translated text
      */
     public static String tr(String text, Object[] objects) {
         return getSingleton().i18n.tr(text, objects);
@@ -73,10 +74,13 @@ public class RC_Gettext {
     /**
      * Convenience method that invokes {@link #tr(String, Object[])}.
      *
+     * @param text       the key string to be translated.
+     * @param o1    object args to be formatted and substituted.
+     *
      * @since 0.9
+     * @return String
      */
-    public static String tr(String text, Object o1)
-    {
+    public static String tr(String text, Object o1) {
         return getSingleton().i18n.tr(text, o1);
     }
 
@@ -84,7 +88,12 @@ public class RC_Gettext {
     /**
      * Convenience method that invokes {@link #tr(String, Object[])}.
      *
+     * @param text       the key string to be translated.
+     * @param o1    object args to be formatted and substituted.
+     * @param o2    object args to be formatted and substituted.
+     *
      * @since 0.9
+     * @return String
      */
     public static String tr(String text, Object o1, Object o2) {
         return getSingleton().i18n.tr(text, o1, o2);
@@ -93,20 +102,31 @@ public class RC_Gettext {
     /**
      * Convenience method that invokes {@link #tr(String, Object[])}.
      *
+     * @param text       the key string to be translated.
+     * @param o1    object args to be formatted and substituted.
+     * @param o2    object args to be formatted and substituted.
+     * @param o3    object args to be formatted and substituted.
+     *
      * @since 0.9
+     * @return String
      */
-    public static String tr(String text, Object o1, Object o2, Object o3)
-    {
+    public static String tr(String text, Object o1, Object o2, Object o3) {
         return getSingleton().i18n.tr(text, o1, o2, o3);
     }
 
     /**
      * Convenience method that invokes {@link #tr(String, Object[])}.
      *
+     * @param text       the key string to be translated.
+     * @param o1    object args to be formatted and substituted.
+     * @param o2    object args to be formatted and substituted.
+     * @param o3    object args to be formatted and substituted.
+     * @param o4    object args to be formatted and substituted.
+     *
      * @since 0.9
+     * @return String
      */
-    public static String tr(String text, Object o1, Object o2, Object o3, Object o4)
-    {
+    public static String tr(String text, Object o1, Object o2, Object o3, Object o4) {
         return getSingleton().i18n.tr(text, o1, o2, o3, o4);
     }
 
@@ -114,17 +134,14 @@ public class RC_Gettext {
      * Returns the plural form for <code>n</code> of the translation of
      * <code>text</code>.
      *
-     * @param text
-     *            the key string to be translated.
-     * @param pluralText
-     *            the plural form of <code>text</code>.
-     * @param n
-     *            value that determines the plural form
-     * @return the translated text
+     * @param text       the key string to be translated.
+     * @param pluralText the plural form of <code>text</code>.
+     * @param n          value that determines the plural form
+     *
      * @since 0.9
+     * @return the translated text
      */
-    public static String trn(String text, String pluralText, long n)
-    {
+    public static String trn(String text, String pluralText, long n) {
         return getSingleton().i18n.trn(text, pluralText, n);
     }
 
@@ -132,19 +149,15 @@ public class RC_Gettext {
      * Returns the plural form for <code>n</code> of the translation of
      * <code>text</code>.
      *
-     * @param text
-     *            the key string to be translated.
-     * @param pluralText
-     *            the plural form of <code>text</code>.
-     * @param n
-     *            value that determines the plural form
-     * @param objects
-     *            object args to be formatted and substituted.
-     * @return the translated text
+     * @param text       the key string to be translated.
+     * @param pluralText the plural form of <code>text</code>.
+     * @param n          value that determines the plural form
+     * @param objects    object args to be formatted and substituted.
+     *
      * @since 0.9
+     * @return the translated text
      */
-    public static String trn(String text, String pluralText, long n, Object[] objects)
-    {
+    public static String trn(String text, String pluralText, long n, Object[] objects) {
         return getSingleton().i18n.trn(text, pluralText, n, objects);
     }
 
@@ -153,10 +166,15 @@ public class RC_Gettext {
      * {@link #trn(String, String, long, Object[])} passing <code>Object</code>
      * arguments as an array.
      *
+     * @param text       the key string to be translated.
+     * @param pluralText the plural form of <code>text</code>.
+     * @param n          value that determines the plural form
+     * @param o1    object args to be formatted and substituted.
+     *
      * @since 0.9
+     * @return String
      */
-    public static String trn(String text, String pluralText, long n, Object o1)
-    {
+    public static String trn(String text, String pluralText, long n, Object o1) {
         return getSingleton().i18n.trn(text, pluralText, n, o1);
     }
 
@@ -165,10 +183,16 @@ public class RC_Gettext {
      * {@link #trn(String, String, long, Object[])} passing <code>Object</code>
      * arguments as an array.
      *
+     * @param text       the key string to be translated.
+     * @param pluralText the plural form of <code>text</code>.
+     * @param n          value that determines the plural form
+     * @param o1    object args to be formatted and substituted.
+     * @param o2    object args to be formatted and substituted.
+     *
      * @since 0.9
+     * @return String
      */
-    public static String trn(String text, String pluralText, long n, Object o1, Object o2)
-    {
+    public static String trn(String text, String pluralText, long n, Object o1, Object o2) {
         return getSingleton().i18n.trn(text, pluralText, n, o1, o2);
     }
 
@@ -177,10 +201,17 @@ public class RC_Gettext {
      * {@link #trn(String, String, long, Object[])} passing <code>Object</code>
      * arguments as an array.
      *
+     * @param text       the key string to be translated.
+     * @param pluralText the plural form of <code>text</code>.
+     * @param n          value that determines the plural form
+     * @param o1    object args to be formatted and substituted.
+     * @param o2    object args to be formatted and substituted.
+     * @param o3    object args to be formatted and substituted.
+     *
      * @since 0.9
+     * @return String
      */
-    public static String trn(String text, String pluralText, long n, Object o1, Object o2, Object o3)
-    {
+    public static String trn(String text, String pluralText, long n, Object o1, Object o2, Object o3) {
         return getSingleton().i18n.trn(text, pluralText, n, o1, o2, o3);
     }
 
@@ -189,13 +220,20 @@ public class RC_Gettext {
      * {@link #trn(String, String, long, Object[])} passing <code>Object</code>
      * arguments as an array.
      *
+     * @param text       the key string to be translated.
+     * @param pluralText the plural form of <code>text</code>.
+     * @param n          value that determines the plural form
+     * @param o1    object args to be formatted and substituted.
+     * @param o2    object args to be formatted and substituted.
+     * @param o3    object args to be formatted and substituted.
+     * @param o4    object args to be formatted and substituted.
+     *
      * @since 0.9
+     * @return String
      */
-    public static String trn(String text, String pluralText, long n, Object o1, Object o2, Object o3, Object o4)
-    {
+    public static String trn(String text, String pluralText, long n, Object o1, Object o2, Object o3, Object o4) {
         return getSingleton().i18n.trn(text, pluralText, n, o1, o2, o3, o4);
     }
-
 
 
 }
