@@ -25,11 +25,9 @@ public class RC_Time {
         String tz;
         if (zone > 0) {
             tz = "Etc/GMT-" + zone.toString();
-        }
-        else if (zone < 0) {
+        } else if (zone < 0) {
             tz = "Etc/GMT+" + Integer.valueOf(Math.abs(zone)).toString();
-        }
-        else {
+        } else {
             tz = "Etc/GMT";
         }
 
@@ -54,35 +52,37 @@ public class RC_Time {
     /**
      * 获得服务器的时区
      * eg: Asia/Tokyo
+     *
+     * @return String
      */
-    public static String server_timezone()
-    {
+    public static String server_timezone() {
         ZoneId defaultZone = ZoneId.systemDefault();
         return defaultZone.getId();
     }
 
     /**
      * 获得服务器的时区偏移小时
+     *
      * @return 偏移秒
      */
-    public static int server_timezone_hour()
-    {
+    public static int server_timezone_hour() {
         int offset = server_timezone_offset();
         return offset / 3600;
     }
 
     /**
      * 获得服务器的时区偏移量
+     *
      * @return 偏移秒
      */
-    public static int server_timezone_offset()
-    {
+    public static int server_timezone_offset() {
         TimeZone tz = TimeZone.getDefault();
         return tz.getOffset(Calendar.ZONE_OFFSET) / 1000;
     }
 
     /**
      * 获取格林威治零时区的时区
+     *
      * @return TimeZone
      */
     public static TimeZone gmtimezone() {
@@ -91,6 +91,7 @@ public class RC_Time {
 
     /**
      * 获得当前格林威治时间的时间戳
+     *
      * @return 10位时间戳
      */
     public static int gmtime() {
@@ -104,6 +105,7 @@ public class RC_Time {
 
     /**
      * 获得当前格林威治时间的自定义格式时间
+     *
      * @param format 时间格式
      * @return 格式化后的时间
      */
@@ -116,7 +118,9 @@ public class RC_Time {
 
     /**
      * 转换字符串形式的时间表达式为GMT时间戳
+     *
      * @param str 格式化后的时间字符串
+     * @return int
      */
     public static int gmstrtotime(String str) {
         int time = strtotime(str);
@@ -128,6 +132,7 @@ public class RC_Time {
 
     /**
      * 获得系统当前时间区的时间戳
+     *
      * @return 10位时间戳
      */
     public static int time() {
@@ -140,6 +145,7 @@ public class RC_Time {
     /**
      * 获得JAVA的DATE时间转的时间戳
      *
+     * @param date Date
      * @return 10位时间戳
      */
     public static int time(Date date) {
@@ -148,50 +154,62 @@ public class RC_Time {
 
     /**
      * 转换字符串形式的时间表达式为当前时区的时间戳
+     *
      * @param str 格式化后的时间字符串
+     * @return int
      */
     public static int strtotime(String str) {
         Date date = StrToTime.strtotime(str);
         assert date != null;
         long time = date.getTime();
-        return (int)(time / 1000);
+        return (int) (time / 1000);
     }
 
     /**
      * 转换字符串形式的时间表达式为当前时区的时间戳
+     *
      * @param str 格式化后的时间字符串
+     * @param now int
+     * @return int
      */
     public static int strtotime(String str, int now) {
         Date date = StrToTime.strtotime(str, now);
         assert date != null;
         long time = date.getTime();
-        return (int)(time / 1000);
+        return (int) (time / 1000);
     }
 
     /**
      * 转换字符串形式的时间表达式为当前时区的时间戳
+     *
      * @param str 格式化后的时间字符串
+     * @param now long
+     * @return int
      */
     public static int strtotime(String str, long now) {
         Date date = StrToTime.strtotime(str, now);
         assert date != null;
         long time = date.getTime();
-        return (int)(time / 1000);
+        return (int) (time / 1000);
     }
 
     /**
      * 转换字符串形式的时间表达式为当前时区的时间戳
+     *
      * @param str 格式化后的时间字符串
+     * @param now Date
+     * @return int
      */
     public static int strtotime(String str, Date now) {
         Date date = StrToTime.strtotime(str, now);
         assert date != null;
         long time = date.getTime();
-        return (int)(time / 1000);
+        return (int) (time / 1000);
     }
 
     /**
      * 获得当前时区的时间转换为自定义格式时间
+     *
      * @return 格式化后的时间
      */
     public static String date() {
@@ -204,6 +222,7 @@ public class RC_Time {
 
     /**
      * 获得当前时区的时间转换为自定义格式时间
+     *
      * @param format 时间格式
      * @return 格式化后的时间
      */
@@ -216,7 +235,8 @@ public class RC_Time {
 
     /**
      * 获得当前时区的时间转换为自定义格式时间
-     * @param format 时间格式
+     *
+     * @param format    时间格式
      * @param timestamp 指定时间戳
      * @return 格式化后的时间
      */
@@ -230,8 +250,9 @@ public class RC_Time {
 
     /**
      * 获得当前时区的时间转换为自定义格式时间
+     *
      * @param format 时间格式
-     * @param date 指定日期
+     * @param date   指定日期
      * @return 格式化后的时间
      */
     public static String date(String format, Date date) {
@@ -243,7 +264,8 @@ public class RC_Time {
 
     /**
      * 获得当前时区的时间转换为自定义格式时间
-     * @param format 时间格式
+     *
+     * @param format    时间格式
      * @param timestamp 指定时间戳
      * @return 格式化后的时间
      */
@@ -253,6 +275,7 @@ public class RC_Time {
 
     /**
      * 返回当前系统时区的时间戳
+     *
      * @return 10位秒级时间戳
      */
     public static int local_time() {
@@ -261,7 +284,9 @@ public class RC_Time {
 
     /**
      * 将一个用户自定义时区的日期转为当前时区的时间戳
+     *
      * @param str 日期字符串
+     * @return int
      */
     public static int local_strtotime(String str) {
         return strtotime(str);
@@ -269,6 +294,7 @@ public class RC_Time {
 
     /**
      * 日期字符串 yyyy-MM-dd
+     *
      * @param timestamp 时间戳
      * @return 日期字符串
      */
@@ -278,6 +304,7 @@ public class RC_Time {
 
     /**
      * 时间字符串 HH:mm:ss
+     *
      * @param timestamp 时间戳
      * @return 时间字符串
      */

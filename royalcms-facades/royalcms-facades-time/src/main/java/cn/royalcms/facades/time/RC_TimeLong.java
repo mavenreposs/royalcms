@@ -22,6 +22,7 @@ public class RC_TimeLong {
     /**
      * 获得服务器的时区
      * eg: Asia/Tokyo
+     * @return String
      */
     public static String server_timezone() {
         ZoneId defaultZone = ZoneId.systemDefault();
@@ -86,6 +87,7 @@ public class RC_TimeLong {
      * 转换字符串形式的时间表达式为GMT时间戳
      *
      * @param str 格式化后的时间字符串
+     * @return long
      */
     public static long gmstrtotime(String str) {
         long time = strtotime(str);
@@ -109,7 +111,7 @@ public class RC_TimeLong {
 
     /**
      * 获得JAVA的DATE时间转的时间戳
-     *
+     * @param date Date
      * @return 10位时间戳
      */
     public static long time(Date date) {
@@ -120,6 +122,7 @@ public class RC_TimeLong {
      * 转换字符串形式的时间表达式为当前时区的时间戳
      *
      * @param str 格式化后的时间字符串
+     * @return long
      */
     public static long strtotime(String str) {
         Date date = StrToTime.strtotime(str);
@@ -132,6 +135,8 @@ public class RC_TimeLong {
      * 转换字符串形式的时间表达式为当前时区的时间戳
      *
      * @param str 格式化后的时间字符串
+     * @param now int
+     * @return long
      */
     public static long strtotime(String str, int now) {
         Date date = StrToTime.strtotime(str, now);
@@ -144,6 +149,8 @@ public class RC_TimeLong {
      * 转换字符串形式的时间表达式为当前时区的时间戳
      *
      * @param str 格式化后的时间字符串
+     * @param now long
+     * @return long
      */
     public static long strtotime(String str, long now) {
         Date date = StrToTime.strtotime(str, now);
@@ -156,6 +163,8 @@ public class RC_TimeLong {
      * 转换字符串形式的时间表达式为当前时区的时间戳
      *
      * @param str 格式化后的时间字符串
+     * @param now Date
+     * @return long
      */
     public static long strtotime(String str, Date now) {
         Date date = StrToTime.strtotime(str, now);
@@ -243,6 +252,7 @@ public class RC_TimeLong {
      * 将一个用户自定义时区的日期转为当前时区的时间戳
      *
      * @param str 日期字符串
+     * @return long
      */
     public static long local_strtotime(String str) {
         return strtotime(str);
