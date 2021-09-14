@@ -23,7 +23,9 @@ public class RC_String {
 
     /**
      * Get a new stringable object from the given string.
+     *
      * @param string 输入字符串
+     *
      * @return Stringable
      */
     public static Stringable of(String string) {
@@ -36,6 +38,8 @@ public class RC_String {
      *
      * @param subject Subject
      * @param search Search
+     *
+     * @return String
      */
     public static String after(String subject, String search) {
         if (search.equals("")) {
@@ -54,6 +58,8 @@ public class RC_String {
      *
      * @param subject Subject
      * @param search Search
+     *
+     * @return String
      */
     public static String afterLast(String subject, String search) {
         if (search.equals("")) {
@@ -74,6 +80,8 @@ public class RC_String {
      * 方法用于判断字符串是否是 7 位 ASCII
      *
      * @param value 输入字符串
+     *
+     * @return boolean
      */
     public static boolean isAscii(char value) {
         return CharUtils.isAscii(value);
@@ -85,6 +93,8 @@ public class RC_String {
      *
      * @param subject 被搜索的内容
      * @param search 搜索的字符串
+     *
+     * @return String
      */
     public static String before(String subject, String search) {
         if (search.equals("")) {
@@ -102,6 +112,8 @@ public class RC_String {
      *
      * @param subject 被搜索的内容
      * @param search 搜索的字符串
+     *
+     * @return String
      */
     public static String beforeLast(String subject, String search) {
         if (search.equals("")) {
@@ -122,6 +134,8 @@ public class RC_String {
      * 方法将指定字符串转换为 驼峰式 表示方法
      *
      * @param value 输入字符串
+     *
+     * @return String
      */
     public static String camel(String value) {
         if (StudlyCache.camelCache.containsKey(value)) {
@@ -141,6 +155,8 @@ public class RC_String {
      *
      * @param haystack 输入字符串
      * @param needles 字符串
+     *
+     * @return boolean
      */
     public static boolean contains(String haystack, String needles) {
         if (! needles.isEmpty() && PHPFunctions.strpos(haystack, needles) != -1) {
@@ -155,6 +171,8 @@ public class RC_String {
      *
      * @param haystack 输入字符串
      * @param needles 查找字符串数组
+     *
+     * @return boolean
      */
     public static boolean contains(String haystack, String[] needles) {
         for (String needle : needles)
@@ -172,6 +190,8 @@ public class RC_String {
      *
      * @param haystack 输入字符串
      * @param needles 查找字符串数组
+     *
+     * @return boolean
      */
     public static boolean containsAll(String haystack, String[] needles) {
         for (String needle : needles) {
@@ -188,6 +208,8 @@ public class RC_String {
      *
      * @param haystack 输入字符串
      * @param needles 查找字符串
+     *
+     * @return boolean
      */
     public static boolean endsWith(String haystack, String needles) {
         return StringUtils.endsWithAny(haystack, needles);
@@ -199,6 +221,8 @@ public class RC_String {
      *
      * @param haystack 输入字符串
      * @param needles 查找字符串
+     *
+     * @return Boolean
      */
     public static Boolean endsWith(String haystack, String[] needles) {
         return StringUtils.endsWithAny(haystack, needles);
@@ -210,6 +234,8 @@ public class RC_String {
      *
      * @param value 输入字符串
      * @param cap 修改字符串
+     *
+     * @return String
      */
     public static String finish(String value, String cap) {
         return StringUtils.stripEnd(value, cap) + cap;
@@ -221,6 +247,8 @@ public class RC_String {
      *
      * @param pattern 输入字符串
      * @param value 查找字符串
+     *
+     * @return Boolean
      */
     public static Boolean is(String pattern, String value) {
         return true;
@@ -231,6 +259,8 @@ public class RC_String {
      * 用于判断指定字符串是否是有效的 UUID
      *
      * @param value 输入字符串
+     *
+     * @return boolean
      */
     public static boolean isUuid(String value) {
         if (value.isEmpty()) {
@@ -250,6 +280,8 @@ public class RC_String {
      * 将字符串转换为 烤串式（ kebab-case ） 表示方法
      *
      * @param value 输入字符串
+     *
+     * @return String
      */
     public static String kebab(String value) {
         return snake(value, '-');
@@ -260,6 +292,8 @@ public class RC_String {
      * 返回指定字符串的长度
      *
      * @param value 输入字符串
+     *
+     * @return int
      */
     public static int length(String value) {
         return StringUtils.length(value);
@@ -270,6 +304,8 @@ public class RC_String {
      * 将字符串以指定长度进行截断
      *
      * @param value 输入字符串
+     *
+     * @return String
      */
     public static String limit(String value) {
         return limit(value, 100, "...");
@@ -281,6 +317,8 @@ public class RC_String {
      *
      * @param value 输入字符串
      * @param limit 切割长度
+     *
+     * @return String
      */
     public static String limit(String value, int limit) {
         return limit(value, limit, "...");
@@ -293,6 +331,8 @@ public class RC_String {
      * @param value 输入字符串
      * @param limit 切割长度
      * @param end 尾部填充
+     *
+     * @return String
      */
     public static String limit(String value, int limit, String end) {
         if (value.length() <= limit) {
@@ -307,6 +347,8 @@ public class RC_String {
      * 用于将字符串转换为小写
      *
      * @param value 输入字符串
+     *
+     * @return String
      */
     public static String lower(String value) {
         return StringUtils.toRootLowerCase(value);
@@ -314,9 +356,12 @@ public class RC_String {
 
     /**
      * Limit the number of words in a string.
+     *
      * @param value 输入字符串
      * @param words 截图多少个单词
      * @param end 追加后缀字符串
+     *
+     * @return String
      */
     public static String words(String value, Integer words, String end) {
         String pattern = "^\\s*+(?:\\S++\\s*+){1," + words + "}";
@@ -333,6 +378,8 @@ public class RC_String {
     /**
      * Generate a more truly "random" alpha-numeric string.
      * 生成一个指定长度16的随机字符串
+     *
+     * @return String
      */
     public static String random() {
         return random(16);
@@ -343,6 +390,8 @@ public class RC_String {
      * 生成一个指定长度的随机字符串
      *
      * @param length Random string length
+     *
+     * @return String
      */
     public static String random(Integer length) {
         return RandomStringUtils.random(length, true, true).toLowerCase(Locale.ROOT);
@@ -355,6 +404,8 @@ public class RC_String {
      * @param search 需要替换的字符串
      * @param replace 替换后的内容
      * @param subject 输入内容
+     *
+     * @return String
      */
     public static String replace(String search, String replace, String subject) {
         return StringUtils.replace(subject, search, replace);
@@ -367,6 +418,8 @@ public class RC_String {
      * @param search 需要替换的字符串
      * @param replace 替换后的内容
      * @param subject 输入内容
+     *
+     * @return String
      */
     public static String replaceArray(String search, String[] replace, String subject) {
         subject = StringUtils.replace(subject, search, "%s");
@@ -380,6 +433,8 @@ public class RC_String {
      * @param search 需要替换的字符串
      * @param replace 替换后的内容
      * @param subject 输入内容
+     *
+     * @return String
      */
     public static String replaceFirst(String search, String replace, String subject) {
         return subject.replaceFirst(search, replace);
@@ -392,6 +447,8 @@ public class RC_String {
      * @param search 需要替换的字符串
      * @param replace 替换后的内容
      * @param subject 输入内容
+     *
+     * @return String
      */
     public static String replaceLast(String search, String replace, String subject) {
         subject = StringUtils.reverse(subject);
@@ -402,8 +459,11 @@ public class RC_String {
 
     /**
      * Begin a string with a single instance of a given value.
+     *
      * @param value 输入字符串
      * @param prefix 前缀
+     *
+     * @return String
      */
     public static String start(String value, String prefix) {
         return prefix + StringUtils.stripStart(value, prefix);
@@ -414,6 +474,8 @@ public class RC_String {
      * 用于将指定字符串转换为大写
      *
      * @param value 输入字符串
+     *
+     * @return String
      */
     public static String upper(String value) {
         return StringUtils.toRootUpperCase(value);
@@ -424,6 +486,8 @@ public class RC_String {
      * 把指定的字符串，每个单词首字母大写
      *
      * @param value 输入字符串
+     *
+     * @return String
      */
     public static String title(String value) {
         return WordUtils.capitalizeFully(value);
@@ -431,9 +495,10 @@ public class RC_String {
 
     /**
      * Generate a URL friendly "slug" from a given string.
-     * @param title
-     * @param separator
-     * @param language
+     *
+     * @param title String
+     * @param separator String
+     * @param language String
      */
     public static void slug(String title, String separator, String language) {
 
@@ -441,7 +506,10 @@ public class RC_String {
 
     /**
      * Convert a string to snake case.
+     *
      * @param value 输入字符串
+     *
+     * @return String
      */
     public static String snake(String value) {
         return snake(value, '_');
@@ -449,8 +517,11 @@ public class RC_String {
 
     /**
      * Convert a string to snake case.
+     *
      * @param value 输入字符串
      * @param delimiter 分割符
+     *
+     * @return String
      */
     public static String snake(String value, char delimiter) {
         String key = new String(value) + delimiter;
@@ -472,6 +543,8 @@ public class RC_String {
      *
      * @param haystack 输入字符串
      * @param needles 查找字符串
+     *
+     * @return Boolean
      */
     public static Boolean startsWith(String haystack, String needles) {
         return StringUtils.startsWithAny(haystack, needles);
@@ -483,6 +556,8 @@ public class RC_String {
      *
      * @param haystack 输入字符串
      * @param needles 查找字符串
+     *
+     * @return Boolean
      */
     public static Boolean startsWith(String haystack, String[] needles) {
         return StringUtils.startsWithAny(haystack, needles);
@@ -491,7 +566,10 @@ public class RC_String {
     /**
      * Convert a value to studly caps case.
      * 方法将带有 _的字符串转换成驼峰命名的字符串，与 Str::snake() 相反
+     *
      * @param value 字符串
+     *
+     * @return String
      */
     public static String studly(String value) {
         String key = new String(value);
@@ -509,9 +587,12 @@ public class RC_String {
 
     /**
      * Returns the portion of string specified by the start and length parameters.
-     * @param string
-     * @param start
-     * @param length
+     *
+     * @param string String
+     * @param start Integer
+     * @param length Integer
+     *
+     * @return String
      */
     public static String substr(String string, Integer start, Integer length) {
         return string;
@@ -522,6 +603,8 @@ public class RC_String {
      * 把指定的字符串首字母大写
      *
      * @param string 输入字符串
+     *
+     * @return String
      */
     public static String ucfirst(String string) {
         return PHPFunctions.ucwords(string);
@@ -529,6 +612,8 @@ public class RC_String {
 
     /**
      * Generate a UUID (version 4).
+     *
+     * @return String
      */
     public static String uuid() {
         return UUID.randomUUID().toString();
@@ -537,6 +622,7 @@ public class RC_String {
     /**
      * Generate a time-ordered UUID (version 4).
      * 用于生成一个「时间戳优先」的 UUID ，它可作为数据库索引列的有效值
+     * @return String
      */
     public static String orderedUuid() {
         return uuid();
@@ -544,7 +630,7 @@ public class RC_String {
 
     /**
      * Set the callable that will be used to generate UUIDs.
-     * @param factory
+     * @param factory String
      */
     public static void createUuidsUsing(String factory) {
 
@@ -563,6 +649,8 @@ public class RC_String {
      *
      * @param value 输入字符串
      * @param length 长度
+     *
+     * @return String
      */
     public static String padBoth(String value, int length) {
         return padBoth(value, length, " ");
@@ -575,6 +663,8 @@ public class RC_String {
      * @param value 输入字符串
      * @param length 长度
      * @param pad 填充字符串
+     *
+     * @return String
      */
     public static String padBoth(String value, int length, String pad) {
         return StringUtils.center(value, length, pad);
@@ -586,6 +676,8 @@ public class RC_String {
      *
      * @param value 输入字符串
      * @param length 长度
+     *
+     * @return String
      */
     public static String padLeft(String value, int length) {
         return padLeft(value, length, " ");
@@ -598,6 +690,8 @@ public class RC_String {
      * @param value 输入字符串
      * @param length 长度
      * @param pad 填充字符串
+     *
+     * @return String
      */
     public static String padLeft(String value, int length, String pad) {
         return StringUtils.leftPad(value, length, pad);
@@ -609,6 +703,8 @@ public class RC_String {
      *
      * @param value 输入字符串
      * @param length 长度
+     *
+     * @return String
      */
     public static String padRight(String value, int length) {
         return padRight(value, length, " ");
@@ -621,6 +717,8 @@ public class RC_String {
      * @param value 输入字符串
      * @param length 长度
      * @param pad 填充字符串
+     *
+     * @return String
      */
     public static String padRight(String value, int length, String pad) {
         return StringUtils.rightPad(value, length, pad);
@@ -628,9 +726,11 @@ public class RC_String {
 
     /**
      * Get the portion of a string between two given values.
+     *
      * @param subject 输入字符串
      * @param from 开始字符
      * @param to 结束字符
+     *
      * @return 返回字符串
      */
     public static String between(String subject, String from, String to) {
@@ -640,9 +740,6 @@ public class RC_String {
 
         return StringUtils.substringBetween(subject, from, to);
     }
-
-
-
 
 
 }
