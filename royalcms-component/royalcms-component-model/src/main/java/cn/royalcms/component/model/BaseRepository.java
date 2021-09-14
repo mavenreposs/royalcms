@@ -17,8 +17,8 @@ import java.util.function.Function;
  * 基类的数据访问接口(继承了CrudRepository,PagingAndSortingRepository,
  * JpaSpecificationExecutor的特性)
  *
- * @param <T>
- * @param <ID>
+ * @param <T> entity
+ * @param <ID> ID
  */
 @NoRepositoryBean
 public interface BaseRepository<T, ID extends Serializable> extends JpaRepositoryImplementation<T, ID> {
@@ -50,6 +50,7 @@ public interface BaseRepository<T, ID extends Serializable> extends JpaRepositor
      * 使用QBL进行查询列表
      *
      * @param query BaseQuery
+     * @return List
      */
     List<T> findAll(BaseQuery query);
 
@@ -58,6 +59,7 @@ public interface BaseRepository<T, ID extends Serializable> extends JpaRepositor
      *
      * @param query BaseQuery
      * @param pageable Pageable
+     * @return Page
      */
     Page<T> findAll(BaseQuery query, Pageable pageable);
 
@@ -66,26 +68,43 @@ public interface BaseRepository<T, ID extends Serializable> extends JpaRepositor
      *
      * @param query BaseQuery
      * @param sort Sort
+     * @return List
      */
     List<T> findAll(BaseQuery query, Sort sort);
 
     /**
      * 使用QBL定位记录
+     * @param query BaseQuery
+     * @return Optional
      */
     Optional<T> findOne(BaseQuery query);
 
     /**
      * 从记录中获取单个值。该方法将直接返回该字段的值
+     * @param query BaseQuery
+     * @param mapper Function
+     * @param <U> Function
+     * @return Optional
      */
     <U> Optional<U> value(BaseQuery query, Function<? super T, ? extends U> mapper);
 
     /**
      * 如果你想获取单列数据的集合，则可以使用 pluck 方法
+     * @param query BaseQuery
+     * @param mapper Function
+     * @param <U> List
+     * @return List
      */
     <U> List<U> pluck(BaseQuery query, Function<? super T, ? extends U> mapper);
 
     /**
      * 如果你想获取单列数据的集合，则可以使用 pluck 方法
+     * @param query BaseQuery
+     * @param value Function
+     * @param key Function
+     * @param <K> Function
+     * @param <V> Function
+     * @return Map
      */
     <K, V> Map<K, V> pluck(BaseQuery query, Function<? super T, ? extends V> value, Function<? super T, ? extends K> key);
 
@@ -99,6 +118,8 @@ public interface BaseRepository<T, ID extends Serializable> extends JpaRepositor
     /**
      * 计算字段值之和
      * @param query BaseQuery
+     * @param fieldName String
+     * @param <Y> Number
      * @return long
      */
     <Y extends Number> Y sum(BaseQuery query, String fieldName);
@@ -106,6 +127,9 @@ public interface BaseRepository<T, ID extends Serializable> extends JpaRepositor
     /**
      * 计算字段值之和
      * @param query BaseQuery
+     * @param fieldName String
+     * @param type Class
+     * @param <Y> Number
      * @return long
      */
     <Y extends Number> Y sum(BaseQuery query, String fieldName, Class<Y> type);
@@ -113,6 +137,8 @@ public interface BaseRepository<T, ID extends Serializable> extends JpaRepositor
     /**
      * 计算字段值最小值
      * @param query BaseQuery
+     * @param fieldName String
+     * @param <Y> Number
      * @return long
      */
     <Y extends Number> Y min(BaseQuery query, String fieldName);
@@ -120,6 +146,9 @@ public interface BaseRepository<T, ID extends Serializable> extends JpaRepositor
     /**
      * 计算字段值最小值
      * @param query BaseQuery
+     * @param fieldName String
+     * @param type Class
+     * @param <Y> Number
      * @return long
      */
     <Y extends Number> Y min(BaseQuery query, String fieldName, Class<Y> type);
@@ -127,6 +156,8 @@ public interface BaseRepository<T, ID extends Serializable> extends JpaRepositor
     /**
      * 计算字段值最大值
      * @param query BaseQuery
+     * @param fieldName String
+     * @param <Y> Number
      * @return long
      */
     <Y extends Number> Y max(BaseQuery query, String fieldName);
@@ -134,6 +165,9 @@ public interface BaseRepository<T, ID extends Serializable> extends JpaRepositor
     /**
      * 计算字段值最大值
      * @param query BaseQuery
+     * @param fieldName String
+     * @param type Class
+     * @param <Y> Number
      * @return long
      */
     <Y extends Number> Y max(BaseQuery query, String fieldName, Class<Y> type);
@@ -141,6 +175,7 @@ public interface BaseRepository<T, ID extends Serializable> extends JpaRepositor
     /**
      * 计算字段值平均值
      * @param query BaseQuery
+     * @param fieldName String
      * @return long
      */
     Double avg(BaseQuery query, String fieldName);
@@ -148,9 +183,9 @@ public interface BaseRepository<T, ID extends Serializable> extends JpaRepositor
     /**
      * 更新方法
      *
-     * @param t
-     * @param updateFileds
-     * @param where
+     * @param t entity
+     * @param where BaseQuery
+     * @param updateFileds String
      * @return int
      */
     int update(T t, BaseQuery where, String... updateFileds);
@@ -158,9 +193,9 @@ public interface BaseRepository<T, ID extends Serializable> extends JpaRepositor
     /**
      * 根据唯一主键更新方法
      *
-     * @param t
-     * @param id
-     * @param updateFileds
+     * @param t entity
+     * @param id ID
+     * @param updateFileds String
      * @return int
      */
     int updateById(T t, ID id, String... updateFileds);

@@ -15,6 +15,9 @@ public class WhereBuilder<T> {
 
     /**
      * 动态生成where语句
+     * @param function WhereClauseInterface
+     * @param <T> Specification
+     * @return Specification
      */
     public static <T> Specification<T> getWhereClause(WhereClauseInterface function) {
         return new Specification<T>() {

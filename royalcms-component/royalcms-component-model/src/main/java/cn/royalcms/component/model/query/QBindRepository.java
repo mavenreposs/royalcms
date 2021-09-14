@@ -12,6 +12,7 @@ import java.lang.annotation.Target;
 public @interface QBindRepository {
     /**
      * 关联的DAO类名，xxx.class
+     * @return Class
      */
     Class<?> value();
 }

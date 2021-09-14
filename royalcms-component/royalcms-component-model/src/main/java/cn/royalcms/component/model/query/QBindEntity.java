@@ -12,6 +12,7 @@ import java.lang.annotation.Target;
 public @interface QBindEntity {
     /**
      * 关联的实体类名，xxx.class
+     * @return Class
      */
     Class<?> entityClass();
 }

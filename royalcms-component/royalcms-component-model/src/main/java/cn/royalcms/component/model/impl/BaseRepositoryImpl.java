@@ -115,10 +115,9 @@ public class BaseRepositoryImpl<T, ID extends Serializable>
     /**
      * 自定义组合查询分页方法
      *
-     * @param query
-     * @param pageable
-     * @return
-     * @author liuyi 2016年4月18日
+     * @param query BaseQuery
+     * @param pageable Pageable
+     * @return Page
      */
     @Override
     public Page<T> findAll(BaseQuery query, Pageable pageable) {
@@ -127,8 +126,8 @@ public class BaseRepositoryImpl<T, ID extends Serializable>
 
     /**
      * 查询条件
-     * <p>
-     * (non-Javadoc)
+     * @param query BaseQuery
+     * @return Optional
      */
     @Override
     public Optional<T> findOne(BaseQuery query) {
@@ -137,6 +136,10 @@ public class BaseRepositoryImpl<T, ID extends Serializable>
 
     /**
      * 从记录中获取单个值。该方法将直接返回该字段的值
+     * @param query BaseQuery
+     * @param mapper Function
+     * @param <U> Optional
+     * @return Optional
      */
     public <U> Optional<U> value(BaseQuery query, Function<? super T, ? extends U> mapper) {
         Optional<T> result = findOne(getConditonByQuery(query));
@@ -145,6 +148,10 @@ public class BaseRepositoryImpl<T, ID extends Serializable>
 
     /**
      * 如果你想获取单列数据的集合，则可以使用 pluck 方法
+     * @param query BaseQuery
+     * @param mapper Function
+     * @param <U> List
+     * @return List
      */
     public <U> List<U> pluck(BaseQuery query, Function<? super T, ? extends U> mapper) {
         List<T> result = findAll(getConditonByQuery(query));
@@ -153,6 +160,12 @@ public class BaseRepositoryImpl<T, ID extends Serializable>
 
     /**
      * 如果你想获取单列数据的集合，则可以使用 pluck 方法
+     * @param query BaseQuery
+     * @param value Function
+     * @param key Function
+     * @param <K> Function
+     * @param <V> Function
+     * @return Map
      */
     public <K, V> Map<K, V> pluck(BaseQuery query, Function<? super T, ? extends V> value, Function<? super T, ? extends K> key) {
         List<T> result = findAll(getConditonByQuery(query));
@@ -188,6 +201,8 @@ public class BaseRepositoryImpl<T, ID extends Serializable>
     /**
      * 计算字段值之和
      * @param query BaseQuery
+     * @param fieldName String
+     * @param <Y> Number
      * @return long
      */
     public <Y extends Number> Y sum(BaseQuery query, String fieldName) {
@@ -197,6 +212,9 @@ public class BaseRepositoryImpl<T, ID extends Serializable>
     /**
      * 计算字段值之和
      * @param query BaseQuery
+     * @param fieldName String
+     * @param type Class
+     * @param <Y> Number
      * @return long
      */
     public <Y extends Number> Y sum(BaseQuery query, String fieldName, Class<Y> type) {
@@ -206,6 +224,8 @@ public class BaseRepositoryImpl<T, ID extends Serializable>
     /**
      * 计算字段值最小值
      * @param query BaseQuery
+     * @param fieldName String
+     * @param <Y> Number
      * @return long
      */
     public <Y extends Number> Y min(BaseQuery query, String fieldName) {
@@ -215,6 +235,9 @@ public class BaseRepositoryImpl<T, ID extends Serializable>
     /**
      * 计算字段值最小值
      * @param query BaseQuery
+     * @param fieldName String
+     * @param type Class
+     * @param <Y> Number
      * @return long
      */
     public <Y extends Number> Y min(BaseQuery query, String fieldName, Class<Y> type) {
@@ -224,6 +247,8 @@ public class BaseRepositoryImpl<T, ID extends Serializable>
     /**
      * 计算字段值最大值
      * @param query BaseQuery
+     * @param fieldName String
+     * @param <Y> Number
      * @return long
      */
     public <Y extends Number> Y max(BaseQuery query, String fieldName) {
@@ -233,6 +258,9 @@ public class BaseRepositoryImpl<T, ID extends Serializable>
     /**
      * 计算字段值最大值
      * @param query BaseQuery
+     * @param fieldName String
+     * @param type Class
+     * @param <Y> Number
      * @return long
      */
     public <Y extends Number> Y max(BaseQuery query, String fieldName, Class<Y> type) {
@@ -242,6 +270,7 @@ public class BaseRepositoryImpl<T, ID extends Serializable>
     /**
      * 计算字段值平均值
      * @param query BaseQuery
+     * @param fieldName String
      * @return long
      */
     public Double avg(BaseQuery query, String fieldName) {
@@ -391,8 +420,9 @@ public class BaseRepositoryImpl<T, ID extends Serializable>
 
     /**
      * 封装自定义组合查询排序列表方法
-     * <p>
-     * (non-Javadoc)
+     * @param query BaseQuery
+     * @param sort Sort
+     * @return List
      */
     @Override
     public List<T> findAll(BaseQuery query, Sort sort) {
@@ -578,10 +608,13 @@ public class BaseRepositoryImpl<T, ID extends Serializable>
 
     /**
      * Creates a new count query for the given {@link Specification}.
-     *
-     * @param spec can be {@literal null}.
-     * @param domainClass must not be {@literal null}.
-     * @return
+     * @param spec Specification
+     * @param domainClass Class
+     * @param fieldName String
+     * @param resultClass Class
+     * @param <S> Specification
+     * @param <Y> Number
+     * @return TypedQuery
      */
     protected <S extends T, Y extends Number> TypedQuery<Y> getSumQuery(@Nullable Specification<S> spec, Class<S> domainClass, String fieldName, Class<Y> resultClass) {
         CriteriaBuilder builder = entityManager.getCriteriaBuilder();
@@ -603,7 +636,12 @@ public class BaseRepositoryImpl<T, ID extends Serializable>
      *
      * @param spec can be {@literal null}.
      * @param domainClass must not be {@literal null}.
-     * @return
+     * @param fieldName String
+     * @param resultClass Class
+     * @param <Y> TypedQuery
+     * @param <S> Specification
+     *
+     * @return TypedQuery
      */
     protected <S extends T, Y extends Number> TypedQuery<Y> getMinQuery(@Nullable Specification<S> spec, Class<S> domainClass, String fieldName, Class<Y> resultClass) {
         CriteriaBuilder builder = entityManager.getCriteriaBuilder();
@@ -625,7 +663,12 @@ public class BaseRepositoryImpl<T, ID extends Serializable>
      *
      * @param spec can be {@literal null}.
      * @param domainClass must not be {@literal null}.
-     * @return
+     * @param fieldName String
+     * @param resultClass Class
+     * @param <S> Specification
+     * @param <Y> TypedQuery
+     *
+     * @return TypedQuery
      */
     protected <S extends T, Y extends Number> TypedQuery<Y> getMaxQuery(@Nullable Specification<S> spec, Class<S> domainClass, String fieldName, Class<Y> resultClass) {
         CriteriaBuilder builder = entityManager.getCriteriaBuilder();
@@ -647,7 +690,10 @@ public class BaseRepositoryImpl<T, ID extends Serializable>
      *
      * @param spec can be {@literal null}.
      * @param domainClass must not be {@literal null}.
-     * @return
+     * @param fieldName String
+     * @param <S> Specification
+     *
+     * @return TypedQuery
      */
     protected <S extends T> TypedQuery<Double> getAvgQuery(@Nullable Specification<S> spec, Class<S> domainClass, String fieldName) {
         CriteriaBuilder builder = entityManager.getCriteriaBuilder();
@@ -669,7 +715,9 @@ public class BaseRepositoryImpl<T, ID extends Serializable>
      * @param spec can be {@literal null}.
      * @param domainClass must not be {@literal null}.
      * @param query must not be {@literal null}.
-     * @return
+     * @param <S> CriteriaQuery
+     * @param <U> Specification
+     * @return Root
      */
     private <S, U extends T> Root<U> applySpecificationToCriteria(@Nullable Specification<U> spec, Class<U> domainClass,
                                                                   CriteriaQuery<S> query) {

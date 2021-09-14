@@ -139,9 +139,8 @@ public class BaseQueryPredicateBuilder {
      *
      * 获取查询实体类名称
      *
-     * @author liuyi 2016年4月16日
-     * @param query
-     * @return
+     * @param query BaseQuery
+     * @return Class
      */
     public static Class<?> queryEntity(BaseQuery query) {
         Annotation anno = query.getClass().getAnnotation(QBindEntity.class);
@@ -154,9 +153,9 @@ public class BaseQueryPredicateBuilder {
      *
      * 获取绑定字段属性值
      *
-     * @author liuyi 2016年4月16日
-     * @param PropertyName
-     * @return
+     * @param query BaseQuery
+     * @param PropertyName String
+     * @return Annotation
      */
     public static Annotation getBindFieldName(BaseQuery query, String PropertyName) {
         try {

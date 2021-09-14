@@ -120,6 +120,8 @@ public class BaseQuery {
 
     /**
      * 计算字段值之和
+     * @param fieldName String
+     * @param <Y> Number
      * @return long
      */
     public <Y extends Number> Y sum(String fieldName) {
@@ -128,6 +130,9 @@ public class BaseQuery {
 
     /**
      * 计算字段值之和
+     * @param fieldName String
+     * @param type Class
+     * @param <Y> Number
      * @return long
      */
     public <Y extends Number> Y sum(String fieldName, Class<Y> type) {
@@ -136,6 +141,8 @@ public class BaseQuery {
 
     /**
      * 计算字段值最小值
+     * @param fieldName String
+     * @param <Y> Number
      * @return long
      */
     public <Y extends Number> Y min(String fieldName) {
@@ -144,6 +151,9 @@ public class BaseQuery {
 
     /**
      * 计算字段值最小值
+     * @param fieldName String
+     * @param type Class
+     * @param <Y> Number
      * @return long
      */
     public <Y extends Number> Y min(String fieldName, Class<Y> type) {
@@ -152,6 +162,8 @@ public class BaseQuery {
 
     /**
      * 计算字段值最大值
+     * @param fieldName String
+     * @param <Y> Number
      * @return long
      */
     public <Y extends Number> Y max(String fieldName) {
@@ -160,6 +172,9 @@ public class BaseQuery {
 
     /**
      * 计算字段值最大值
+     * @param fieldName String
+     * @param type Class
+     * @param <Y> Number
      * @return long
      */
     public <Y extends Number> Y max(String fieldName, Class<Y> type) {
@@ -168,6 +183,7 @@ public class BaseQuery {
 
     /**
      * 计算字段值平均值
+     * @param fieldName String
      * @return long
      */
     public Double avg(String fieldName) {
@@ -176,6 +192,10 @@ public class BaseQuery {
 
     /**
      * 查询条件
+     * @param mapper Function
+     * @param <U> Optional
+     * @param <T> Function
+     * @return Optional
      */
     public <U, T> Optional<U> value(Function<? super T, ? extends U> mapper) {
         return getRepository(queryRepository(this)).value(this, mapper);
@@ -183,6 +203,10 @@ public class BaseQuery {
 
     /**
      * 如果你想获取单列数据的集合，则可以使用 pluck 方法
+     * @param mapper Function
+     * @param <U> Function
+     * @param <T> Function
+     * @return List
      */
     public <U, T> List<U> pluck(Function<? super T, ? extends U> mapper) {
         return getRepository(queryRepository(this)).pluck(this, mapper);
@@ -190,6 +214,13 @@ public class BaseQuery {
 
     /**
      * 如果你想获取单列数据的集合，则可以使用 pluck 方法
+     *
+     * @param value Function
+     * @param key Function
+     * @param <K> Function
+     * @param <V> Function
+     * @param <T> Function
+     * @return Map
      */
     public <K, V, T> Map<K, V> pluck(Function<? super T, ? extends V> value, Function<? super T, ? extends K> key) {
         return getRepository(queryRepository(this)).pluck(this, value, key);
@@ -197,6 +228,8 @@ public class BaseQuery {
 
     /**
      * 使用QBL定位记录
+     * @param <T> Optional
+     * @return Optional
      */
     public <T> Optional<T> findOne() {
         return (Optional<T>) getRepository(queryRepository(this)).findOne(this);
@@ -204,6 +237,8 @@ public class BaseQuery {
 
     /**
      * 使用QBL进行查询列表
+     * @param <T> List
+     * @return List
      */
     public <T> List<T> findAll() {
         return getRepository(queryRepository(this)).findAll(this);
@@ -211,8 +246,9 @@ public class BaseQuery {
 
     /**
      * 封装分页查询
-     *
+     * @param <T> Page
      * @param pageable Pageable
+     * @return Page
      */
     public <T> Page<T> findAll(Pageable pageable) {
         return getRepository(queryRepository(this)).findAll(this, pageable);
@@ -220,8 +256,9 @@ public class BaseQuery {
 
     /**
      * 封装排序查询
-     *
+     * @param <T> List
      * @param sort Sort
+     * @return List
      */
     public <T> List<T> findAll(Sort sort) {
         return getRepository(queryRepository(this)).findAll(this, sort);
@@ -239,34 +276,37 @@ public class BaseQuery {
 
     /**
      * 获取列表中的IDs数组
-     *
+     * @param <T> List
      * @param rows      列表对象
-     * @param filedName 指定int字段
+     * @param fieldName 指定int字段
      * @return int数组
      */
-    public <T> List<Integer> getIds(List<T> rows, String filedName) {
-        return getRepository(queryRepository(this)).getIds(rows, filedName);
+    public <T> List<Integer> getIds(List<T> rows, String fieldName) {
+        return getRepository(queryRepository(this)).getIds(rows, fieldName);
     }
 
     /**
      * 自定义更新update方法
      * @param entity 实体类
-     * @param updateFileds 指定更新的字段
+     * @param updateFields 指定更新的字段
+     * @param <T> entity
      * @return 更新结果
      */
-    public <T> int update(T entity, String... updateFileds) {
-        return getRepository(queryRepository(this)).update(entity, this, updateFileds);
+    public <T> int update(T entity, String... updateFields) {
+        return getRepository(queryRepository(this)).update(entity, this, updateFields);
     }
 
     /**
      * 根据唯一主键更新相关数据
      * @param entity 实体类
      * @param id 主键ID
-     * @param updateFileds 指定更新的字段
+     * @param updateFields 指定更新的字段
+     * @param <T> entity
+     * @param <ID> ID
      * @return 更新结果
      */
-    public <T, ID extends Serializable> int updateById(T entity, ID id, String... updateFileds) {
-        return getRepository(queryRepository(this)).updateById(entity, id, updateFileds);
+    public <T, ID extends Serializable> int updateById(T entity, ID id, String... updateFields) {
+        return getRepository(queryRepository(this)).updateById(entity, id, updateFields);
     }
 
     /**
@@ -280,6 +320,7 @@ public class BaseQuery {
     /**
      * 根据唯一主键删除相关数据
      * @param ids 主键ID
+     * @param <ID> ID
      * @return 更新结果
      */
     public <ID> int deleteByIds(ID... ids) {

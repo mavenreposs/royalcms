@@ -21,6 +21,10 @@ public class QueryToSpecification<T> implements Specification<T> {
 
     /**
      *
+     * @param root Root
+     * @param cquery CriteriaQuery
+     * @param cb CriteriaBuilder
+     * @return Predicate
      * @see Specification#toPredicate(Root, CriteriaQuery, CriteriaBuilder)
      */
     @Override
