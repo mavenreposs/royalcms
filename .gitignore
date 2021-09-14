@@ -16,3 +16,8 @@ royalcms-component/royalcms-component-gettext/target
 royalcms-component/royalcms-component-config/target
 royalcms-component/royalcms-component-bean/target
 pom.xml.versionsBackup
+royalcms-component/target
+royalcms-contracts/target
+royalcms-facades/royalcms-facades-random/target
+royalcms-facades/target
+target
