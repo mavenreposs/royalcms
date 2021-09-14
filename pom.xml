@@ -80,9 +80,9 @@
     <profiles>
         <!-- Deployment profile (required so these plugins are only used when deploying) -->
         <profile>
-            <id>deploy-sonatype</id>
+            <id>deploy</id>
             <activation>
-                <activeByDefault>true</activeByDefault>
+                <activeByDefault>false</activeByDefault>
             </activation>
             <build>
                 <plugins>
