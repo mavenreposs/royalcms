@@ -9,5 +9,7 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="module" module-name="royalcms-component-gettext" />
+    <orderEntry type="library" name="Maven: com.googlecode.gettext-commons:gettext-commons:0.9.8" level="project" />
   </component>
 </module>
