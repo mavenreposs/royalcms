@@ -6,7 +6,7 @@
 
     <groupId>io.github.mavenreposs</groupId>
     <artifactId>royalcms-dependencies</artifactId>
-    <version>1.0.0</version>
+    <version>0.0.2</version>
 
     <packaging>pom</packaging>
 
