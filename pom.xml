@@ -49,6 +49,7 @@
         <module>royalcms-facades</module>
         <module>royalcms-contracts</module>
         <module>royalcms-component</module>
+        <module>royalcms-starter</module>
     </modules>
 
     <properties>
