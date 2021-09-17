@@ -58,132 +58,132 @@
             <dependency>
                 <groupId>io.github.mavenreposs</groupId>
                 <artifactId>royalcms-component-api</artifactId>
-                <version>0.0.1</version>
+                <version>0.0.2</version>
             </dependency>
             <dependency>
                 <groupId>io.github.mavenreposs</groupId>
                 <artifactId>royalcms-component-bean</artifactId>
-                <version>0.0.1</version>
+                <version>0.0.2</version>
             </dependency>
             <dependency>
                 <groupId>io.github.mavenreposs</groupId>
                 <artifactId>royalcms-component-config</artifactId>
-                <version>0.0.1</version>
+                <version>0.0.2</version>
             </dependency>
             <dependency>
                 <groupId>io.github.mavenreposs</groupId>
                 <artifactId>royalcms-contracts-storage</artifactId>
-                <version>0.0.1</version>
+                <version>0.0.2</version>
             </dependency>
             <dependency>
                 <groupId>io.github.mavenreposs</groupId>
                 <artifactId>royalcms-component-datetime</artifactId>
-                <version>0.0.1</version>
+                <version>0.0.2</version>
             </dependency>
             <dependency>
                 <groupId>io.github.mavenreposs</groupId>
                 <artifactId>royalcms-facades-array</artifactId>
-                <version>0.0.1</version>
+                <version>0.0.2</version>
             </dependency>
             <dependency>
                 <groupId>io.github.mavenreposs</groupId>
                 <artifactId>royalcms-facades-base64</artifactId>
-                <version>0.0.1</version>
+                <version>0.0.2</version>
             </dependency>
             <dependency>
                 <groupId>io.github.mavenreposs</groupId>
                 <artifactId>royalcms-facades-bean</artifactId>
-                <version>0.0.1</version>
+                <version>0.0.2</version>
             </dependency>
             <dependency>
                 <groupId>io.github.mavenreposs</groupId>
                 <artifactId>royalcms-facades-collection</artifactId>
-                <version>0.0.1</version>
+                <version>0.0.2</version>
             </dependency>
             <dependency>
                 <groupId>io.github.mavenreposs</groupId>
                 <artifactId>royalcms-facades-config</artifactId>
-                <version>0.0.1</version>
+                <version>0.0.2</version>
             </dependency>
             <dependency>
                 <groupId>io.github.mavenreposs</groupId>
                 <artifactId>royalcms-facades-event</artifactId>
-                <version>0.0.1</version>
+                <version>0.0.2</version>
             </dependency>
             <dependency>
                 <groupId>io.github.mavenreposs</groupId>
                 <artifactId>royalcms-facades-gettext</artifactId>
-                <version>0.0.1</version>
+                <version>0.0.2</version>
             </dependency>
             <dependency>
                 <groupId>io.github.mavenreposs</groupId>
                 <artifactId>royalcms-facades-json</artifactId>
-                <version>0.0.1</version>
+                <version>0.0.2</version>
             </dependency>
             <dependency>
                 <groupId>io.github.mavenreposs</groupId>
                 <artifactId>royalcms-facades-log</artifactId>
-                <version>0.0.1</version>
+                <version>0.0.2</version>
             </dependency>
             <dependency>
                 <groupId>io.github.mavenreposs</groupId>
                 <artifactId>royalcms-facades-random</artifactId>
-                <version>0.0.1</version>
+                <version>0.0.2</version>
             </dependency>
             <dependency>
                 <groupId>io.github.mavenreposs</groupId>
                 <artifactId>royalcms-facades-serializer</artifactId>
-                <version>0.0.1</version>
+                <version>0.0.2</version>
             </dependency>
             <dependency>
                 <groupId>io.github.mavenreposs</groupId>
                 <artifactId>royalcms-facades-storage</artifactId>
-                <version>0.0.1</version>
+                <version>0.0.2</version>
             </dependency>
             <dependency>
                 <groupId>io.github.mavenreposs</groupId>
                 <artifactId>royalcms-facades-string</artifactId>
-                <version>0.0.1</version>
+                <version>0.0.2</version>
             </dependency>
             <dependency>
                 <groupId>io.github.mavenreposs</groupId>
                 <artifactId>royalcms-facades-time</artifactId>
-                <version>0.0.1</version>
+                <version>0.0.2</version>
             </dependency>
             <dependency>
                 <groupId>io.github.mavenreposs</groupId>
                 <artifactId>royalcms-facades-upload</artifactId>
-                <version>0.0.1</version>
+                <version>0.0.2</version>
             </dependency>
             <dependency>
                 <groupId>io.github.mavenreposs</groupId>
                 <artifactId>royalcms-component-gettext</artifactId>
-                <version>0.0.1</version>
+                <version>0.0.2</version>
             </dependency>
             <dependency>
                 <groupId>io.github.mavenreposs</groupId>
                 <artifactId>royalcms-component-jwt</artifactId>
-                <version>0.0.1</version>
+                <version>0.0.2</version>
             </dependency>
             <dependency>
                 <groupId>io.github.mavenreposs</groupId>
                 <artifactId>royalcms-component-model</artifactId>
-                <version>0.0.1</version>
+                <version>0.0.2</version>
             </dependency>
             <dependency>
                 <groupId>io.github.mavenreposs</groupId>
                 <artifactId>royalcms-component-storage</artifactId>
-                <version>0.0.1</version>
+                <version>0.0.2</version>
             </dependency>
             <dependency>
                 <groupId>io.github.mavenreposs</groupId>
                 <artifactId>royalcms-component-support</artifactId>
-                <version>0.0.1</version>
+                <version>0.0.2</version>
             </dependency>
             <dependency>
                 <groupId>io.github.mavenreposs</groupId>
                 <artifactId>royalcms-component-upload</artifactId>
-                <version>0.0.1</version>
+                <version>0.0.2</version>
             </dependency>
 
 
