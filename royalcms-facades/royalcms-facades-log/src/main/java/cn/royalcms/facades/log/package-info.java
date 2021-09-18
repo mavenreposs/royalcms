@@ -1,0 +1,1 @@
+package cn.royalcms.facades.log;
