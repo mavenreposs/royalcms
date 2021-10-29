@@ -1,0 +1,5 @@
+# Auto Configure
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
+    cn.royalcms.component.bean.autoconfigure.BeanAutoConfigure
+org.springframework.context.ApplicationContextAware=\
+    cn.royalcms.component.bean.SpringBeanFactory

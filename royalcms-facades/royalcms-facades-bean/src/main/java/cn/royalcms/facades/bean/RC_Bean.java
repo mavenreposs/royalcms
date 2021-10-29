@@ -1,7 +1,6 @@
 package cn.royalcms.facades.bean;
 
-
-import cn.royalcms.component.bean.SpringBeanFactory;
+import org.springframework.util.ClassUtils;
 
 public class RC_Bean {
 
@@ -16,6 +15,15 @@ public class RC_Bean {
      */
     public static Object getBean(String name) {
         return SpringBeanFactory.getBean(name);
+    }
+
+    public static Class<?> getClazz(String name) {
+        try {
+            return ClassUtils.forName(name, ClassLoader.getSystemClassLoader());
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
+            return null;
+        }
     }
 
     /**
@@ -40,5 +48,6 @@ public class RC_Bean {
     public static <T> T getBean(String name, Class<T> clazz) {
         return SpringBeanFactory.getBean(name, clazz);
     }
+
 
 }
