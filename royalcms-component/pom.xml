@@ -20,7 +20,6 @@
 
     <modules>
         <module>royalcms-component-api</module>
-        <module>royalcms-component-bean</module>
         <module>royalcms-component-config</module>
         <module>royalcms-component-datetime</module>
         <module>royalcms-component-gettext</module>
