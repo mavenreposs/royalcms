@@ -19,7 +19,7 @@
     <dependencies>
         <dependency>
             <groupId>io.github.mavenreposs</groupId>
-            <artifactId>royalcms-component-bean</artifactId>
+            <artifactId>royalcms-facades-bean</artifactId>
         </dependency>
     </dependencies>
 

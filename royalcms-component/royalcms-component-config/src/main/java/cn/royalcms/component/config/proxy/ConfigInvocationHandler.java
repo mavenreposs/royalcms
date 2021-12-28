@@ -1,6 +1,6 @@
 package cn.royalcms.component.config.proxy;
 
-import cn.royalcms.component.bean.SpringBeanFactory;
+import cn.royalcms.facades.bean.SpringBeanFactory;
 import cn.royalcms.component.config.contracts.ConfigItemRepositoryInterface;
 import cn.royalcms.component.config.manager.ItemManager;
 
