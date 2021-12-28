@@ -1,6 +1,6 @@
 package cn.royalcms.component.model.query;
 
-import cn.royalcms.component.bean.SpringBeanFactory;
+import cn.royalcms.facades.bean.SpringBeanFactory;
 import cn.royalcms.component.model.BaseRepository;
 import org.springframework.core.annotation.AnnotationConfigurationException;
 import org.springframework.data.domain.Page;
