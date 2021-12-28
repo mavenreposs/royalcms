@@ -1,6 +1,7 @@
 package cn.royalcms.facades.storage;
 
-import cn.royalcms.component.bean.SpringBeanFactory;
+import cn.royalcms.facades.bean.RC_Bean;
+import cn.royalcms.facades.bean.SpringBeanFactory;
 import cn.royalcms.contracts.storage.Cloud;
 import cn.royalcms.contracts.storage.Storage;
 import cn.royalcms.component.support.DriverManager;
@@ -91,11 +92,11 @@ public class RC_Storage {
     }
 
     private static <T extends Storage> Optional<T> getBean(String name) {
-        Class<?> calazz = SpringBeanFactory.getClazz(name);
+        Class<?> calazz = RC_Bean.getClazz(name);
         if (calazz == null) {
             return Optional.empty();
         }
-        T storage = (T) SpringBeanFactory.getBean(calazz);
+        T storage = (T) RC_Bean.getBean(calazz);
         return Optional.of(storage);
     }
 
