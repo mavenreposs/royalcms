@@ -1,6 +1,6 @@
 package cn.royalcms.facades.event;
 
-import cn.royalcms.component.bean.SpringBeanFactory;
+import cn.royalcms.facades.bean.SpringBeanFactory;
 import org.springframework.context.ApplicationEvent;
 
 public class RC_Event {
