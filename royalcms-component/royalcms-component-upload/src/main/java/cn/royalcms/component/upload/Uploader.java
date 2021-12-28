@@ -1,6 +1,6 @@
 package cn.royalcms.component.upload;
 
-import cn.royalcms.component.bean.SpringBeanFactory;
+import cn.royalcms.facades.bean.SpringBeanFactory;
 import cn.royalcms.component.upload.starter.autoconfigure.AppUploadProperties;
 import io.github.mavenreposs.php.functions.PHPFunctions;
 import org.apache.commons.lang3.ArrayUtils;
