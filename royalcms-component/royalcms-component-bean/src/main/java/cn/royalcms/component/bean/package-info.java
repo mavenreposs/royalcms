@@ -1,1 +1,0 @@
-package cn.royalcms.component.bean;
